@@ -1,35 +1,35 @@
-@import 'responsive';
+  @import 'responsive';
 
-.innerform{
-  display:flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-}
+  .innerform{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
 
-.inputs{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  justify-content: center;
-  overflow: hidden;
-  font-size: 0.8rem;
-  width: 100%;
-}
+  .inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 0.8rem;
+    width: 100%;
+  }
 
-.inputs input {
-  border-radius: 0.5rem;
-  width: 100%;
-  display: block;
-  padding: 0.6rem;
-  margin-top: 0.4rem;
-  margin-bottom: 0.9rem;
-  font-size: 0.8rem;
-  border: none;
-  outline: none;
-  border-bottom: 0.01rem solid #B0B3B9;
-  height: 35px;
-}
+  .inputs input {
+    border-radius: 0.5rem;
+    width: 100%;
+    display: block;
+    padding: 0.6rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.9rem;
+    font-size: 0.8rem;
+    border: none;
+    outline: none;
+    border-bottom: 0.01rem solid #B0B3B9;
+    height: 35px;
+  }
 
 

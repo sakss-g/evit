@@ -31,9 +31,9 @@ html {
     font-size: 60%;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   html {
-    font-size: 60%;
+    font-size: 70%;
   }
 }
 @media (min-width: 900px) {
@@ -191,7 +191,7 @@ html {
   color: red;
 }
 
-.signup-right-container {
+.right-signup {
   display: flex;
   flex-wrap: wrap;
   width: 35%;
@@ -203,7 +203,7 @@ html {
   border-bottom-right-radius: 1rem;
 }
 @media (max-width: 767px) {
-  .signup-right-container {
+  .right-signup {
     max-width: 30%;
     flex: 0 0 30%;
     padding: 20px;
@@ -212,7 +212,7 @@ html {
   }
 }
 
-.login-right-container {
+.right-login {
   display: flex;
   flex-wrap: wrap;
   width: 35%;
@@ -311,13 +311,6 @@ html {
   position: relative;
 }
 
-.icon_container img {
-  position: absolute;
-  top: 0;
-  margin-left: 280px;
-  margin-top: 11px;
-}
-
 .header {
   width: 100%;
 }
@@ -392,23 +385,6 @@ html {
   color: #696969;
 }
 
-/*.box-form .copyright-login{
-  color: #696969;
-}
-
-.box-form .copyright-login p {
-  font-size: 12px;
-  text-align: center;
-}
-
-.box-form .copyright-login p a{
-  text-decoration: none;
-  color: #696969;
-}
-
-.box-form .hr-login{
-  margin-top: 210px;
-}*/
 /*.icon_container img {
    position: absolute;
    top: 0;
@@ -429,54 +405,5 @@ html {
   cursor: pointer;
   color: black;
 }
-
-/*.all-container {
-    background: url(./images/container-bg.png), #FFF;
-    background-size: cover;
-    max-width: 920px;
-    margin: auto;
-    border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    height: 80vh;
-    background-position: 28% center;
-}
-
-
-.signup-right-container {
-    max-width: 30%;
-    flex: 0 0 30%;
-    background: #e7e7e7b0;
-    padding: 20px;
-}
-
-.left-container {
-    max-width: 70%;
-    flex: 0 0 70%;
-}
-
-.left-container img {
-    max-width: 270px;
-}
-
-
-form.signup.innerform .inputs input {
-    display: block;
-    width: 100%;
-    height: 40px;
-}
-
-.all-container > div {
-    @media(max-width: 767px) {
-        max-width: 100%;
-        flex: 0 0 100%;
-    }
-
-}
-
-.arrow-signup {
-    position: absolute;
-    bottom: 0;
-}*/
 
 /*# sourceMappingURL=style.css.map */
