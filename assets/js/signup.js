@@ -1,20 +1,17 @@
  function myFunction() {
-     var x = document.getElementById("myInput");
+     var x = document.getElementById("passwordInput");
      if (x.type === "password") {
        x.type = "text";
        document.getElementById("togglePassword").classList.add("fa-eye-slash");
 			 document.getElementById("togglePassword").classList.remove("fa-eye");
-       //$("#togglePassword").attr("class", "fa-eye-slash")
      } else {
        x.type = "password";
        document.getElementById("togglePassword").classList.add("fa-eye");
 			 document.getElementById("togglePassword").classList.remove("fa-eye-slash");
-       //$("#togglePassword").attr("class", "fa-eye")
-
      }
  }
 
- function validateSignUp() {
+function validateSignUp() {
   var fname = document.forms["signUp"]["fullname"].value;
   var email = document.forms["signUp"]["email"].value;
   var password = document.forms["signUp"]["password"].value;
@@ -22,6 +19,8 @@
   if (fname == "") {
     alert("Name must be filled out");
     return false;
+  }else{
+    setSuccess(fullname);
   }
 
   if (email == "") {
