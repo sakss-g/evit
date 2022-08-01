@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.form {
+  background-image: url(images/bg.png), linear-gradient(250deg, rgb(239, 132, 41) 2%, rgb(239, 41, 94) 100%);
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 15rem;
+  margin-top: 5px;
+  margin-right: 8px;
+  align-self: center;
+}
+
+/*body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Open Sans", sans-serif;
+    color: #333333;
+
+    /*@include for-big-desktop-up{
+      background-image: url(../assets/images/logo-shape.png), linear-gradient(to top right, #ff3399 -30%, #ff9966 100%);
+      margin-top: 5px;
+      height: auto;
+      margin-right: 8px;
+    background-size: cover;
+
+    }
+
+  }*/
+.innerform .button-signup {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-top: 1.9rem;
+  width: 100%;
+  align-self: center;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #e30b5d;
+  border-color: #e30b5d;
+}
+
+.innerform .button-login {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-top: 1.9rem;
+  width: 100%;
+  align-self: center;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #e30b5d;
+  border-color: #e30b5d;
+}
+
+.all-container {
+  position: relative;
+  background-image: url(../assets/images/container-bg.png);
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  height: 85vh;
+  max-width: 1100px;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+/*@include for-big-desktop-up {    
+    background-image: url(../assets/images/a.png);
+    position: relative;
+    height: auto;
+    max-width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  } 
+}
+
+@media (max-width: 980px){
+  .box-form {
+    flex-flow: wrap;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+  }
+}
+
+.form div {
+  height: auto;
+}*/
+.all-container .left-container {
+  display: flex;
+  padding: 1.5rem;
+  color: white;
+  width: 65%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 60%;
+  padding: 1rem;
+}
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  height: 55%;
+  justify-content: space-between;
+}
+
+.overlay-heading {
+  font-size: 4rem;
+  padding-top: 6rem;
+}
+
+.overlay-account {
+  padding-top: 4rem;
+  font-size: 1rem;
+}
+
+.overlay-account a {
+  color: red;
+}
+
+.signup-right-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 35%;
+  height: auto;
+  color: black;
+  background-color: rgba(220, 220, 220, 0.8);
+  padding: 1.3rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.login-right-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 35%;
+  height: auto;
+  color: rgb(220, 220, 220);
+  background-color: rgba(35, 43, 43, 0.6);
+  padding: 1.3rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.header {
+  text-align: center;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+}
+
+.header .line-heading {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.header .account-heading {
+  margin-top: 1.6rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.header .signup-heading-login {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.header .signup-heading-login a {
+  font-weight: 900;
+  color: black;
+}
+
+.innerform {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*height: 80%;*/
+  position: relative;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+input {
+  border-radius: 0.5rem;
+  width: 100%;
+  display: block;
+  padding: 0.6rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.9rem;
+  font-size: 0.8rem;
+  border: none;
+  outline: none;
+  border-bottom: 0.01rem solid #B0B3B9;
+}
+
+.form .arrow-signup {
+  position: absolute;
+  right: 75rem;
+  bottom: -0.3rem;
+}
+
+.form .arrow-login {
+  position: absolute;
+  right: 15.5rem;
+  bottom: -0.2rem;
+  transform: scaleX(-1);
+}
+
+.icon_container {
+  position: relative;
+}
+
+.icon_container img {
+  position: absolute;
+  top: 0;
+  margin-left: 280px;
+  margin-top: 11px;
+}
+
+.box-form .header h2 {
+  margin-top: 60px;
+  font-size: 30px;
+  line-height: 1;
+  text-align: center;
+}
+
+.box-form .header h3 {
+  font-size: 23px;
+  margin-top: 70px;
+  line-height: 0;
+  text-align: center;
+}
+
+.box-form .header p {
+  font-size: 14px;
+  text-align: center;
+}
+
+.box-form .header p a {
+  text-decoration: none;
+  font-weight: 700;
+  color: black;
+}
+
+.innerform .updates-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.innerform .updates-container input {
+  margin: 0;
+  margin-right: 1rem;
+  width: 0.8rem;
+}
+
+.innerform .updates-container .text-checkbox {
+  display: inline-block;
+  height: auto;
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.innerform .endsentence {
+  padding-top: 0.8rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.footer {
+  color: #696969;
+  margin-top: 1rem;
+}
+
+.footer p {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.footer p a {
+  text-decoration: none;
+  color: #696969;
+}
+
+/*.box-form .copyright-login{
+  color: #696969;
+}
+
+.box-form .copyright-login p {
+  font-size: 12px;
+  text-align: center;
+}
+
+.box-form .copyright-login p a{
+  text-decoration: none;
+  color: #696969;
+}
+
+.box-form .hr-login{
+  margin-top: 210px;
+}*/
+.icon_container img {
+  position: absolute;
+  top: 0;
+  margin-left: 18.3rem;
+  margin-top: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */

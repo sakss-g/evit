@@ -1,0 +1,30 @@
+
+  @mixin for-mobile {
+  
+    @media (max-width: 686px) { @content; }
+  
+  }
+
+  @mixin for-tablet-up {
+  
+    @media (max-width: 998px) { @content; }
+  
+  }
+
+  @mixin for-tablet {
+  
+    @media (max-width: 900px) { @content; }
+  
+  }
+  
+  @mixin for-desktop-up {
+  
+    @media (max-width: 1200px) { @content; }
+  
+  }
+  
+  @mixin for-big-desktop-up {
+  
+    @media (max-width: 1800px) { @content; }
+  
+  }

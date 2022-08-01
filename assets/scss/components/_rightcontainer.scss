@@ -1,0 +1,52 @@
+  .signup-right-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 35%;
+    height:auto;
+    color: black;
+    background-color: rgb(220, 220, 220, 0.8);
+    padding: 1.3rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .login-right-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 35%;
+    height:auto;
+    color: rgb(220, 220, 220);
+    background-color: rgba(35,43,43, 0.6);
+    padding: 1.3rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .header{
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+  }
+
+  .header .line-heading{
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .header .account-heading{
+    margin-top: 1.6rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .header .signup-heading-login{
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .header .signup-heading-login a{
+    font-weight: 900;
+    color: black;
+  }
