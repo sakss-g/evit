@@ -17,15 +17,6 @@
       padding: 20px; 
       border-bottom-left-radius: 0; 
       border-top-right-radius: 0;
-      // padding: 3rem;
-      // width: 100%;
-      // border-bottom-left-radius: 0;
-      // border-top-right-radius: 0;
-      // border-bottom-left-radius: 1.5rem;
-      // max-width: 30%;
-      // flex: 0 0 30%;
-      // background: #e7e7e7b0;
-      // padding: 20px;
     }
 
   }
@@ -58,12 +49,20 @@
     margin-top: 1.6rem;
     font-size: 1.5rem;
     font-weight: 600;
+
+    @include for-mobile{
+      margin-top: 0.5rem;
+    }
   }
 
   .header .signup-heading-login{
     font-size: 0.9rem;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
+
+    @include for-mobile{
+      margin-top: 0.1rem;
+    }
   }
 
   .header .signup-heading-login a{

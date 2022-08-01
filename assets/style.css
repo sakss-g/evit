@@ -57,6 +57,11 @@ html {
   background-color: #e30b5d;
   border-color: #e30b5d;
 }
+@media (max-width: 767px) {
+  .innerform .button-signup {
+    margin-top: 0.5rem;
+  }
+}
 
 .innerform .button-login {
   color: #ffffff;
@@ -97,6 +102,9 @@ html {
     flex-wrap: wrap;
     height: 80vh;
     background-position: 28% center;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    overflow: hidden;
   }
 }
 
@@ -145,12 +153,6 @@ html {
   width: 65%;
   flex-direction: column;
   justify-content: space-between;
-}
-@media (max-width: 767px) {
-  .all-container .left-container {
-    max-width: 70%;
-    flex: 0 0 70%;
-  }
 }
 
 .left-container img {
@@ -239,11 +241,21 @@ html {
   font-size: 1.5rem;
   font-weight: 600;
 }
+@media (max-width: 767px) {
+  .header .account-heading {
+    margin-top: 0.5rem;
+  }
+}
 
 .header .signup-heading-login {
   font-size: 0.9rem;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+}
+@media (max-width: 767px) {
+  .header .signup-heading-login {
+    margin-top: 0.1rem;
+  }
 }
 
 .header .signup-heading-login a {
@@ -306,6 +318,10 @@ html {
   margin-top: 11px;
 }
 
+.header {
+  width: 100%;
+}
+
 .box-form .header h2 {
   margin-top: 60px;
   font-size: 30px;
@@ -358,6 +374,12 @@ html {
 .footer {
   color: #696969;
   margin-top: 1rem;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .footer {
+    margin-top: 0.3rem;
+  }
 }
 
 .footer p {

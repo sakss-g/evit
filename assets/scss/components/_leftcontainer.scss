@@ -5,11 +5,6 @@
     width: 65%;
     flex-direction: column;
     justify-content: space-between;
-
-    @include for-mobile{
-      max-width: 70%;
-      flex: 0 0 70%;
-    }
   }
 
   .left-container img {
