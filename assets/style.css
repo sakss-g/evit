@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400|PT+Sans:400,700");
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +28,7 @@ html {
 
 @media (max-width: 599px) {
   html {
-    font-size: 55%;
+    font-size: 60%;
   }
 }
 @media (min-width: 600px) {
@@ -51,7 +52,7 @@ html {
   margin-top: 1.9rem;
   width: 100%;
   align-self: center;
-  padding: 0.5rem 0.5rem;
+  padding: 0.55rem 0.5rem;
   border-radius: 0.5rem;
   background-color: #e30b5d;
   border-color: #e30b5d;
@@ -63,7 +64,7 @@ html {
   margin-top: 1.9rem;
   width: 100%;
   align-self: center;
-  padding: 0.5rem 0.5rem;
+  padding: 0.55rem 0.5rem;
   border-radius: 0.5rem;
   background-color: #e30b5d;
   border-color: #e30b5d;
@@ -156,17 +157,27 @@ html {
   max-width: 270px;
   justify-content: left;
 }
+@media (max-width: 767px) {
+  .left-container img {
+    padding: 10px;
+  }
+}
 
 .overlay {
   display: flex;
   flex-direction: column;
-  height: 55%;
+  height: auto;
   justify-content: space-between;
 }
 
 .overlay-heading {
   font-size: 4rem;
   padding-top: 6rem;
+}
+@media (max-width: 767px) {
+  .overlay-heading {
+    padding: 1rem;
+  }
 }
 
 .overlay-account {
@@ -258,7 +269,7 @@ html {
   width: 100%;
 }
 
-form.signup.innerform .inputs input {
+.inputs input {
   border-radius: 0.5rem;
   width: 100%;
   display: block;
@@ -269,7 +280,7 @@ form.signup.innerform .inputs input {
   border: none;
   outline: none;
   border-bottom: 0.01rem solid #B0B3B9;
-  height: 40px;
+  height: 35px;
 }
 
 .form .arrow-signup {
@@ -376,16 +387,24 @@ form.signup.innerform .inputs input {
 .box-form .hr-login{
   margin-top: 210px;
 }*/
-.icon_container img {
-  position: absolute;
-  top: 0;
-  margin-left: 18.3rem;
-  margin-top: 1rem;
-}
-@media (max-width: 767px) {
-  .icon_container img {
-    left: 3rem;
+/*.icon_container img {
+   position: absolute;
+   top: 0;
+   margin-left: 18.5rem;
+   margin-top: 1rem;
+
+  @include for-mobile {    
+
   }
+}*/
+.icon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 1rem;
+  height: 100%;
+  display: flex;
+  cursor: pointer;
 }
 
 /*.all-container {

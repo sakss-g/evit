@@ -2,10 +2,14 @@
      var x = document.getElementById("myInput");
      if (x.type === "password") {
        x.type = "text";
-       $("#togglePassword").attr("src", "../assets/images/hide-password.png")
+       document.getElementById("togglePassword").classList.add("fa-eye-slash");
+			 document.getElementById("togglePassword").classList.remove("fa-eye");
+       //$("#togglePassword").attr("class", "fa-eye-slash")
      } else {
        x.type = "password";
-       $("#togglePassword").attr("src", "../assets/images/view-password.png")
+       document.getElementById("togglePassword").classList.add("fa-eye");
+			 document.getElementById("togglePassword").classList.remove("fa-eye-slash");
+       //$("#togglePassword").attr("class", "fa-eye")
 
      }
  }

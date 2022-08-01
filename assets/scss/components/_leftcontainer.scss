@@ -15,12 +15,15 @@
   .left-container img {
     max-width: 270px;
     justify-content: left;
+    @include for-mobile{
+      padding:10px;
+    }
   }
 
   .overlay{
     display: flex;
     flex-direction: column;
-    height: 55%;
+    height: auto;
     justify-content: space-between;
     
   }
@@ -28,6 +31,9 @@
   .overlay-heading{
     font-size: 4rem;
     padding-top: 6rem;
+    @include for-mobile{
+      padding:1rem;
+    }
   }
 
   .overlay-account{
