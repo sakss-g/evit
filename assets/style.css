@@ -32,7 +32,8 @@
   margin-right: 1.2rem;
   align-self: center;
 }
-@media (max-width: 686px) {
+
+/*@media (max-width: 686px) {
   .form {
     background-image: url(images/bg.png), linear-gradient(250deg, rgb(239, 132, 41) 2%, rgb(239, 41, 94) 100%);
     background-repeat: no-repeat;
@@ -40,7 +41,7 @@
     background-attachment: fixed;
     background-size: cover;
   }
-}
+}*/
 
 /*body {
     background-size: cover;
