@@ -3,4 +3,8 @@
     top: 0;
     margin-left: 18.3rem;
     margin-top: 1rem;
+
+   @include for-mobile {    
+      left: 3rem;
+   }
  }

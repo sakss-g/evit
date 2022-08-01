@@ -1,13 +1,12 @@
   .form .arrow-signup{
     position: absolute;
-    right: 75rem;
-    bottom: -0.3rem;  
+    bottom: 0;
   }
 
   .form .arrow-login{
+    right:0;
     position: absolute;
-    right: 15.5rem;
-    bottom: -0.2rem;
+    bottom: 0;
     transform: scaleX(-1);
   }
 

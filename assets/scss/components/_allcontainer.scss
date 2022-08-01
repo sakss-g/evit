@@ -1,23 +1,55 @@
 @import 'responsive';
 
-.all-container{
-  position: relative;
-  background-image: url(../assets/images/container-bg.png);
-  background-size: cover;
-  background-position: right;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 auto;
-  height: 85vh;
-  max-width: 1100px;
-  border-radius: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  .all-container{
+    position: relative;
+    background-image: url(../assets/images/container-bg.png);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    height: 85vh;
+    max-width: 1100px;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
- /* @include for-phone-small{
-    background-image: url(../assets/images/a.png);
+    @include for-mobile {    
+      background: url(./images/container-bg.png), #FFF;
+      background-size: cover;
+      max-width: 920px;
+      margin: auto;
+      border-radius: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      height: 80vh;
+      background-position: 28% center;
+      }
+  }
+
+  .all-container > div {
+    @media(max-width: 767px) {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+   
+}
+  
+
+ /*@include for-mobile{
+    background-image: url(assets/images/container-bg.png);
+    position: relative;
+    height: auto;
+    max-width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @include for-desktop{
+    background-image: url(assets/images/container-bg.png);
     position: relative;
     height: auto;
     max-width: 100%;
@@ -25,25 +57,9 @@
     background-position: center;
     background-repeat: no-repeat;
   }*/
-}
+ 
 
-/*@media only screen and (max-width:700px){
-  .all-container{
-    width:100%;
-  }
-}
-    /*@include for-big-desktop-up {    
-      background-image: url(../assets/images/a.png);
-      position: relative;
-      height: auto;
-      max-width: 100%;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    } 
-  }
-
-  @media (max-width: 980px){
+  /*@media (max-width: 980px){
     .box-form {
       flex-flow: wrap;
       text-align: center;

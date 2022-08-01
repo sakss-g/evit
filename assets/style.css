@@ -1,14 +1,3 @@
-/*@mixin for-desktop {
-
-  @media (max-width: 998rem) { @content; }
-
-}
-
-@mixin for-mobile {
-
-  @media (max-width: 768rem) { @content; }
-
-}*/
 * {
   margin: 0;
   padding: 0;
@@ -27,39 +16,35 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 0 15rem;
+  padding: 0 15px;
   margin-top: 1rem;
-  margin-right: 1.2rem;
   align-self: center;
 }
 
-/*@media (max-width: 686px) {
-  .form {
-    background-image: url(images/bg.png), linear-gradient(250deg, rgb(239, 132, 41) 2%, rgb(239, 41, 94) 100%);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
+html {
+  font-size: 62.5%;
+}
+
+@media (max-width: 599px) {
+  html {
+    font-size: 55%;
   }
-}*/
-
-/*body {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: "Open Sans", sans-serif;
-    color: #333333;
-
-    /*@include for-big-desktop-up{
-      background-image: url(../assets/images/logo-shape.png), linear-gradient(to top right, #ff3399 -30%, #ff9966 100%);
-      margin-top: 5px;
-      height: auto;
-      margin-right: 8px;
-    background-size: cover;
-
-    }
-
-  }*/
+}
+@media (min-width: 600px) {
+  html {
+    font-size: 60%;
+  }
+}
+@media (min-width: 900px) {
+  html {
+    font-size: 85%;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 100%;
+  }
+}
 .innerform .button-signup {
   color: #ffffff;
   font-size: 1rem;
@@ -84,17 +69,6 @@
   border-color: #e30b5d;
 }
 
-/*@mixin for-desktop {
-
-  @media (max-width: 998rem) { @content; }
-
-}
-
-@mixin for-mobile {
-
-  @media (max-width: 768rem) { @content; }
-
-}*/
 .all-container {
   position: relative;
   background-image: url(../assets/images/container-bg.png);
@@ -110,57 +84,77 @@
   max-width: 1100px;
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  /* @include for-phone-small{
-     background-image: url(../assets/images/a.png);
-     position: relative;
-     height: auto;
-     max-width: 100%;
-     background-size: cover;
-     background-position: center;
-     background-repeat: no-repeat;
-   }*/
+}
+@media (max-width: 767px) {
+  .all-container {
+    background: url(./images/container-bg.png), #FFF;
+    background-size: cover;
+    max-width: 920px;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 80vh;
+    background-position: 28% center;
+  }
 }
 
-/*@media only screen and (max-width:700px){
-  .all-container{
-    width:100%;
+@media (max-width: 767px) {
+  .all-container > div {
+    max-width: 100%;
+    flex: 0 0 100%;
   }
 }
-    /*@include for-big-desktop-up {    
-      background-image: url(../assets/images/a.png);
-      position: relative;
-      height: auto;
-      max-width: 100%;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    } 
-  }
 
-  @media (max-width: 980px){
-    .box-form {
-      flex-flow: wrap;
-      text-align: center;
-      align-content: center;
-      align-items: center;
-    }
-  }
+/*@include for-mobile{
+   background-image: url(assets/images/container-bg.png);
+   position: relative;
+   height: auto;
+   max-width: 100%;
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+ }
 
-  .form div {
-    height: auto;
-  }*/
+ @include for-desktop{
+   background-image: url(assets/images/container-bg.png);
+   position: relative;
+   height: auto;
+   max-width: 100%;
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+ }*/
+/*@media (max-width: 980px){
+  .box-form {
+    flex-flow: wrap;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+  }
+}
+
+.form div {
+  height: auto;
+}*/
 .all-container .left-container {
   display: flex;
-  padding: 1.5rem;
+  padding: 20px;
   color: white;
   width: 65%;
   flex-direction: column;
   justify-content: space-between;
 }
+@media (max-width: 767px) {
+  .all-container .left-container {
+    max-width: 70%;
+    flex: 0 0 70%;
+  }
+}
 
-.logo {
-  width: 60%;
-  padding: 1rem;
+.left-container img {
+  max-width: 270px;
+  justify-content: left;
 }
 
 .overlay {
@@ -194,6 +188,15 @@
   padding: 1.3rem;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
+}
+@media (max-width: 767px) {
+  .signup-right-container {
+    max-width: 30%;
+    flex: 0 0 30%;
+    padding: 20px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+  }
 }
 
 .login-right-container {
@@ -237,42 +240,17 @@
   color: black;
 }
 
-/*@mixin for-desktop {
-
-  @media (max-width: 998rem) { @content; }
-
-}
-
-@mixin for-mobile {
-
-  @media (max-width: 768rem) { @content; }
-
-}*/
 .innerform {
   display: flex;
   flex-direction: column;
   position: relative;
   width: 100%;
-  /*@include for-phone-only {    
-    padding: 0;
-  }
-
-  @include for-tablet-portrait-up{
-
-    padding: 0 2rem;
-
-  }
-
-  @include for-desktop-up{
-    padding: 0 2rem;
-  }*/
 }
 
 .inputs {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /*height: 80%;*/
   position: relative;
   justify-content: center;
   overflow: hidden;
@@ -280,7 +258,7 @@
   width: 100%;
 }
 
-input {
+form.signup.innerform .inputs input {
   border-radius: 0.5rem;
   width: 100%;
   display: block;
@@ -291,18 +269,18 @@ input {
   border: none;
   outline: none;
   border-bottom: 0.01rem solid #B0B3B9;
+  height: 40px;
 }
 
 .form .arrow-signup {
   position: absolute;
-  right: 75rem;
-  bottom: -0.3rem;
+  bottom: 0;
 }
 
 .form .arrow-login {
+  right: 0;
   position: absolute;
-  right: 15.5rem;
-  bottom: -0.2rem;
+  bottom: 0;
   transform: scaleX(-1);
 }
 
@@ -404,5 +382,59 @@ input {
   margin-left: 18.3rem;
   margin-top: 1rem;
 }
+@media (max-width: 767px) {
+  .icon_container img {
+    left: 3rem;
+  }
+}
+
+/*.all-container {
+    background: url(./images/container-bg.png), #FFF;
+    background-size: cover;
+    max-width: 920px;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 80vh;
+    background-position: 28% center;
+}
+
+
+.signup-right-container {
+    max-width: 30%;
+    flex: 0 0 30%;
+    background: #e7e7e7b0;
+    padding: 20px;
+}
+
+.left-container {
+    max-width: 70%;
+    flex: 0 0 70%;
+}
+
+.left-container img {
+    max-width: 270px;
+}
+
+
+form.signup.innerform .inputs input {
+    display: block;
+    width: 100%;
+    height: 40px;
+}
+
+.all-container > div {
+    @media(max-width: 767px) {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+}
+
+.arrow-signup {
+    position: absolute;
+    bottom: 0;
+}*/
 
 /*# sourceMappingURL=style.css.map */

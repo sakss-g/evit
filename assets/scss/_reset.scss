@@ -1,62 +1,50 @@
-@import 'components/responsive';
+  @import 'components/responsive';
 
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", sans-serif;
-  text-decoration: none;
-  font-weight: 500;
-  box-sizing: border-box;
-}
-
-.form{
-  background-image: url(images/bg.png), linear-gradient(250deg, rgba(239,132,41,1) 2%,  rgba(239,41,94,1) 100%); 
-  background-size: cover;
-  background-position: right;
-  background-repeat: no-repeat;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  padding: 0 15rem;
-  margin-top: 1rem;
-  margin-right: 1.2rem;
-  align-self: center;
-
-  
-  @include for-mobile{
-    background-image: url(images/bg.png), linear-gradient(250deg, rgba(239,132,41,1) 2%,  rgba(239,41,94,1) 100%); 
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+    box-sizing: border-box;
   }
-}
 
-// @media only screen and (max-width:700px){
-//   .form{
-//     width: 100%;
-//     background-image: url(images/bg.png), linear-gradient(250deg, rgba(239,132,41,1) 2%,  rgba(239,41,94,1) 100%); 
-//     position:absolute;
-//     background-size: cover;
-//   }
-
-// }
-
-/*body {
+  .form{
+    background-image: url(images/bg.png), linear-gradient(250deg, rgba(239,132,41,1) 2%,  rgba(239,41,94,1) 100%); 
     background-size: cover;
+    background-position: right;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: "Open Sans", sans-serif;
-    color: #333333;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 15px;
+    margin-top: 1rem;
+    align-self: center;
 
-    /*@include for-big-desktop-up{
-      background-image: url(../assets/images/logo-shape.png), linear-gradient(to top right, #ff3399 -30%, #ff9966 100%);
-      margin-top: 5px;
-      height: auto;
-      margin-right: 8px;
-    background-size: cover;
+  }
 
+  html {
+    font-size: 62.5%;
+  }
+  @media (max-width: 599px) {
+    html {
+      font-size: 55%;
     }
-
-  }*/
+  }
+  @media (min-width: 600px) {
+    html {
+      font-size: 60%;
+    }
+  }
+  @media (min-width: 900px) {
+    html {
+      font-size: 85%;
+    }
+  }
+  @media (min-width: 1200px) {
+    html {
+      font-size: 100%;
+    }
+  }
+  

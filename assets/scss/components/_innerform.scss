@@ -5,27 +5,12 @@
   flex-direction: column;
   position: relative;
   width: 100%;
-
-  /*@include for-phone-only {    
-    padding: 0;
-  }
-
-  @include for-tablet-portrait-up{
-
-    padding: 0 2rem;
-
-  }
-
-  @include for-desktop-up{
-    padding: 0 2rem;
-  }*/
 }
 
 .inputs{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /*height: 80%;*/
   position: relative;
   justify-content: center;
   overflow: hidden;
@@ -33,7 +18,7 @@
   width: 100%;
 }
 
-input {
+form.signup.innerform .inputs input {
   border-radius: 0.5rem;
   width: 100%;
   display: block;
@@ -44,4 +29,6 @@ input {
   border: none;
   outline: none;
   border-bottom: 0.01rem solid #B0B3B9;
+  height: 40px;
 }
+

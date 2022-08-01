@@ -1,3 +1,5 @@
+  @import 'responsive';
+  
   .signup-right-container{
     display: flex;
     flex-wrap: wrap;
@@ -8,6 +10,24 @@
     padding: 1.3rem;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
+
+    @include for-mobile {  
+      max-width: 30%;
+      flex: 0 0 30%;
+      padding: 20px; 
+      border-bottom-left-radius: 0; 
+      border-top-right-radius: 0;
+      // padding: 3rem;
+      // width: 100%;
+      // border-bottom-left-radius: 0;
+      // border-top-right-radius: 0;
+      // border-bottom-left-radius: 1.5rem;
+      // max-width: 30%;
+      // flex: 0 0 30%;
+      // background: #e7e7e7b0;
+      // padding: 20px;
+    }
+
   }
 
   .login-right-container{
