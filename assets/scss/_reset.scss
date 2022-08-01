@@ -19,11 +19,29 @@
   align-items: center;
   overflow: hidden;
   padding: 0 15rem;
-  margin-top: 5px;
-  margin-right: 8px;
-  //width:70%;
+  margin-top: 1rem;
+  margin-right: 1.2rem;
   align-self: center;
+
+  
+  @include for-mobile{
+    background-image: url(images/bg.png), linear-gradient(250deg, rgba(239,132,41,1) 2%,  rgba(239,41,94,1) 100%); 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
 }
+
+// @media only screen and (max-width:700px){
+//   .form{
+//     width: 100%;
+//     background-image: url(images/bg.png), linear-gradient(250deg, rgba(239,132,41,1) 2%,  rgba(239,41,94,1) 100%); 
+//     position:absolute;
+//     background-size: cover;
+//   }
+
+// }
 
 /*body {
     background-size: cover;

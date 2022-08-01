@@ -1,8 +1,24 @@
+@import 'responsive';
+
 .innerform{
   display:flex;
   flex-direction: column;
   position: relative;
-  width: 100%
+  width: 100%;
+
+  /*@include for-phone-only {    
+    padding: 0;
+  }
+
+  @include for-tablet-portrait-up{
+
+    padding: 0 2rem;
+
+  }
+
+  @include for-desktop-up{
+    padding: 0 2rem;
+  }*/
 }
 
 .inputs{

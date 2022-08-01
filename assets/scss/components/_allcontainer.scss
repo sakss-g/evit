@@ -16,6 +16,21 @@
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
+ /* @include for-phone-small{
+    background-image: url(../assets/images/a.png);
+    position: relative;
+    height: auto;
+    max-width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }*/
+}
+
+/*@media only screen and (max-width:700px){
+  .all-container{
+    width:100%;
+  }
 }
     /*@include for-big-desktop-up {    
       background-image: url(../assets/images/a.png);
