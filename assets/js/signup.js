@@ -1,5 +1,5 @@
  function myFunction() {
-     var x = document.getElementById("passwordInput");
+     var x = document.getElementById("password");
      if (x.type === "password") {
        x.type = "text";
        document.getElementById("togglePassword").classList.add("fa-eye-slash");
@@ -11,45 +11,77 @@
      }
  }
 
-function validateSignUp() {
-  var fname = document.forms["signUp"]["fullname"].value;
-  var email = document.forms["signUp"]["email"].value;
-  var password = document.forms["signUp"]["password"].value;
-  
-  if (fname == "") {
-    alert("Name must be filled out");
-    return false;
-  }else{
-    setSuccess(fullname);
-  }
+ /*$(function(){
+  var $signupForm = $("#signup-form");
+    if($signupForm.lenght){
+      $signupForm.validate({
+        rules:{
+          fullname:{
+            required: true
+          }
+        },
+        messages:{
+          fullname:{
+            required: 'Name must be filled'
+          }
+        }
+      })
+    }
+ })*/
 
-  if (email == "") {
-    alert("Email must be filled out");
-    return false;
-  }else{
-    validateSignUpEmail(email)
-  }
+  function validateSignUp() {
 
-  if (password == "") {
-    alert("Password must be filled out");
-    return false;
-  }
+    var fname = document.forms["signUp"]["fullname"].value;
+    var email = document.forms["signUp"]["email"].value;
+    var password = document.forms["signUp"]["password"].value;
+    
+    if (fname == "" && email == "" && password == "") {
+      alert("all fields are empty");
+    }
+    else if (fname == "" && email == ""){
+      alert("name and email are empty");
+    }
+    else if(email == "" && password == ""){
+      alert("email and password are empty");
+    }
+    else if(fname == "" && password == ""){
+      alert("name and password are empty");
+    }
+    else if(fname == ""){
+      alert("name is empty");
+    }
+    else if (email == ""){
+      alert("email is empty");
+    }
+    else{
+      if(password.length < 6){
+        alert("password must be atleast 6 characters");
+      }
+      
+      if(email != ""){
+        validateSignUpEmail(email);
+      }
+    }
  }
 
  function validateLogIn(){
   var email = document.forms["logIn"]["email"].value;
   var password = document.forms["logIn"]["password"].value;
 
-  if (email == "") {
-    alert("Email must be filled out");
-    return false;
-  }else{
-    validateLogInEmail(email)
+  if (email == "" && password == "") {
+    alert("name and email are empty");
   }
-
-  if (password == "") {
-    alert("Password must be filled out");
-    return false;
+  else if (email == ""){
+    alert("email is empty");
+  }
+  else{
+    if(password.length < 6){
+      alert("password must be atleast 6 characters");
+    }
+    
+    if(email != ""){
+      validateLogInEmail(email);
+    }
   }
  }
 

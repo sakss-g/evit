@@ -1,5 +1,5 @@
 <?php
-session_start();
+/*session_start();
 
     include("connections.php");
 
@@ -22,7 +22,7 @@ session_start();
                     if($user_data['password'] === $password)
                     {
                         $_SESSION['id'] = $user_data['id'];
-                        echo "login";
+                        header("Location: login.php");
                         die;
                     }
                 }    
@@ -32,7 +32,7 @@ session_start();
         {
             echo "Please enter some valid information!";
         }
-    }
+    }*/
 
 ?>
 

@@ -1,8 +1,7 @@
 <?php
-session_start();
+/*session_start();
 
     include("connections.php");
-    //include("functions.php")
 
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
@@ -21,7 +20,7 @@ session_start();
         {
             echo "Please enter some valid information!";
         }
-    }
+    }*/
 ?>
 
 <!DOCTYPE html>
@@ -33,9 +32,12 @@ session_start();
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>    
     <title>Sign Up</title>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    
     <script src="assets/js/signup.js"></script>
 
 </head>
@@ -49,6 +51,8 @@ session_start();
             </div>
         </div>
 
+        <div id="error"></div>
+
         <div class="right-container right-signup">
             <div class="header">
                 <h2 class="line-heading">Share Your awesomeness</h2>
@@ -56,21 +60,24 @@ session_start();
                 <p class="signup-heading-login">Already have an account?<a href="login.php">Log In</a></p>
             </div>
 
-            <form name="signUp" class="signup innerform" action="" method="post">
+            <form name="signUp" class="signup innerform" action="" method="post" id = "form">
                 <div class="inputs">
                     <label>Full Name</label>
-                    <input type="text" name="fullname">
+                    <input type="text" name="fullname" id="fullname">
+                    <!-- <i class="fa fa-check-circle" aria-hidden = "true"><span>Error msg</span></i> -->
+                    <!-- <i class="fa fa-exclamation-circle" aria-hidden = "true"></i> -->
+                    
                 </div>
                 
                 <div class="inputs">
                     <label>Email</label>
-                    <input type="email" name="email" required/> 
+                    <input name="email" id="email"/> 
                 </div>
                 
                 <div class="inputs">
                     <label>Password</label>
                     <div class="icon_container">
-                        <input type="password" placeholder="Must be atleast 6 characters" id="passwordInput" name="password">
+                        <input type="password" placeholder="Must be atleast 6 characters" id="password" name="password">
                         <span class="icon"><i class="fa fa-eye" aria-hidden="true" onclick="myFunction()" id="togglePassword"></i></span>
                     </div>
                 </div>
@@ -97,6 +104,6 @@ session_start();
             <img src="assets/images/arrow.png" alt="">
         </a>
     </div>
-    
+
 </body>
 </html>
