@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+    include("connections.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,69 +15,55 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>    
-    <title>Sign Up</title>
+    <title>Log In</title>
 
     <script src="assets/js/signup.js"></script>
 
 </head>
-<body class ="form">
+<body class = "form">
     <div class="all-container">
         <div class="left-container">
             <img src="assets/images/logo.png" alt="name" class="logo">
             <div class="overlay">
                 <h3 class="overlay-heading">Welcome to eagle visionit</h3>
-                <p class="overlay-account">Don't have an account? <a href="login.html">Login Now.</a></p>
+                <p class="overlay-account">Don't have an account? <a href="signup.php">Create Yours Now.</a></p>
             </div>
         </div>
 
-        <div class="right-container right-signup">
+        <div class="right-container right-login">
             <div class="header">
                 <h2 class="line-heading">Share Your awesomeness</h2>
-                <h3 class="account-heading">Sign Up</h3>
-                <p class="signup-heading-login">Already have an account?<a href="login.html">Log In</a></p>
+                <h3 class="account-heading">Log In</h3>
             </div>
-
-            <form name="signUp" class="signup innerform">
-                <div class="inputs">
-                    <label>Full Name</label>
-                    <input type="text" name="fullname">
-                </div>
-                
+            
+            <form name="logIn" class="login innerform">
                 <div class="inputs">
                     <label>Email</label>
                     <input type="email" name="email" required/> 
-                </div>
-                
+                </div>    
+
                 <div class="inputs">
                     <label>Password</label>
                     <div class="icon_container">
-                        <input type="password" placeholder="Must be atleast 6 characters" id="passwordInput" name="password">
-                        <span class="icon"><i class="fa fa-eye" aria-hidden="true" onclick="myFunction()" id="togglePassword"></i></span>
+                        <input type="password" placeholder="Must be atleast 6 characters" name="password" id="passwordInput">
+                        <span class="icon"><i class="fa fa-eye" aria-hidden="true" onclick="myFunction()" id="togglePassword"></i></span>                        
                     </div>
                 </div>
 
-                <div class="updates-container">
-                    <input type="checkbox" name="item" class="checkbox" unchecked/>
-                    <span class="text-checkbox">Sign up for email updates</span>
-                </div>
-
-                <button class="button-signup" type="submit" onclick="validateSignUp()">Sign up</button>
-
-                <p class = "endsentence">By continuing, you agree to accept our Privacy Policy and Terms of Service.</p>
-
+                <button class="button-login" type="submit" onclick="validateLogIn()">Log In</button>
             </form>
 
             <div class="footer">
                 <p>copyright <span>&copy; </span> 2022   |  <a href="#">eaglevisionit.com</a>  |  <a href="#">Terms and Conditions</a> | <a href="#">Privacy Policy</a></p>
             </div>
-        </div>
-    </div>
+		</div>
+	</div>
 
-    <div class="arrow-signup">
-        <a href="login.html">
-            <img src="../assets/images/arrow.png" alt="">
+    <div class="arrow-login">
+        <a href="signup.php">
+            <img src="assets/images/arrow.png" alt="">
         </a>
     </div>
-    
+
 </body>
 </html>
