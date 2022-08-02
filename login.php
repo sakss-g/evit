@@ -3,6 +3,37 @@ session_start();
 
     include("connections.php");
 
+    if(isset($_POST['login_form']))
+    {
+        $email = $_POST['email'];    
+        $password = $_POST['password'];  
+        
+        if(!empty($email) && !empty($password))
+        {
+            $query = "select * from user where email = '$email';";
+            $result = mysqli_query($con, $query);
+
+            if($result)
+            {
+                if($result && mysqli_num_rows($result) > 0)
+                {
+                    $user_data = mysqli_fetch_assoc($result);
+                    
+                    if($user_data['password'] === $password)
+                    {
+                        $_SESSION['id'] = $user_data['id'];
+                        echo "login";
+                        die;
+                    }
+                }    
+            }
+            echo "Please enter some valid information!";
+        }else
+        {
+            echo "Please enter some valid information!";
+        }
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +67,7 @@ session_start();
                 <h3 class="account-heading">Log In</h3>
             </div>
             
-            <form name="logIn" class="login innerform">
+            <form name="logIn" method="post" class="login innerform" action="">
                 <div class="inputs">
                     <label>Email</label>
                     <input type="email" name="email" required/> 
@@ -50,7 +81,7 @@ session_start();
                     </div>
                 </div>
 
-                <button class="button-login" type="submit" onclick="validateLogIn()">Log In</button>
+                <button class="button-login" type="submit" name="login_form" onclick="validateLogIn()">Log In</button>
             </form>
 
             <div class="footer">

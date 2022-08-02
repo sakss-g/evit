@@ -12,9 +12,8 @@ session_start();
         
         if(!empty($name) && !empty($email) && !empty($password) && !is_numeric($name))
         {
-            $query = "insert into user (name, email, password) values ('$name', '$email', '$password')";
-
-            mysqli_query($query);
+            $query = "insert into user (name, email, password) values ('$name', '$email', '$password');";
+            mysqli_query($con, $query);
 
             header("Location: login.php");
             die;
@@ -57,7 +56,7 @@ session_start();
                 <p class="signup-heading-login">Already have an account?<a href="login.php">Log In</a></p>
             </div>
 
-            <form name="signUp" class="signup innerform" action="validation.php" method="post">
+            <form name="signUp" class="signup innerform" action="" method="post">
                 <div class="inputs">
                     <label>Full Name</label>
                     <input type="text" name="fullname">
