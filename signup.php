@@ -34,14 +34,14 @@
 
     <title>Sign Up</title>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
-    
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
     <script src="assets/js/signup.js"></script>
+    <script src="assets/js/password.js"></script>
 
 </head>
 <body class ="form">
+    <div class="validation-message hide"></div>  
     <div class="all-container">
         <div class="left-container">
             <img src="assets/images/logo.png" alt="name" class="logo">
@@ -51,8 +51,6 @@
             </div>
         </div>
 
-        <div id="error"></div>
-
         <div class="right-container right-signup">
             <div class="header">
                 <h2 class="line-heading">Share Your awesomeness</h2>
@@ -60,12 +58,10 @@
                 <p class="signup-heading-login">Already have an account?<a href="login.php">Log In</a></p>
             </div>
 
-            <form name="signUp" class="signup innerform" action="" method="post" id = "form">
+            <form name="signUp" class="signupform innerform" action="" method="post" id = "signup-form">
                 <div class="inputs">
                     <label>Full Name</label>
                     <input type="text" name="fullname" id="fullname">
-                    <!-- <i class="fa fa-check-circle" aria-hidden = "true"><span>Error msg</span></i> -->
-                    <!-- <i class="fa fa-exclamation-circle" aria-hidden = "true"></i> -->
                     
                 </div>
                 
@@ -87,7 +83,7 @@
                     <span class="text-checkbox">Sign up for email updates</span>
                 </div>
 
-                <button class="button-signup" type="submit" onclick="validateSignUp()">Sign up</button>
+                <button class="button-signup" type="submit" value = "Submit" >Sign up</button>
 
                 <p class = "endsentence">By continuing, you agree to accept our Privacy Policy and Terms of Service.</p>
 

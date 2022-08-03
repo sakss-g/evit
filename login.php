@@ -67,7 +67,7 @@
                 <h3 class="account-heading">Log In</h3>
             </div>
             
-            <form name="logIn" method="post" class="login innerform" action="">
+            <form name="logIn" method="post" class="loginform innerform" action="">
                 <div class="inputs">
                     <label>Email</label>
                     <input type="email" name="email" required/> 
