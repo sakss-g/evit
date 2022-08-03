@@ -10,7 +10,7 @@ jQuery( document ).ready( function(){
   jQuery( document ).on( 'submit', 'form.loginform',function(e){
     var email = jQuery( this ).find( 'input[name=email]' ).val();
     var password = jQuery( this ).find( 'input[name=password]' ).val();
-    var message = '';
+    var message = "";
       
     if (email == "" && password == "") {
       message = "All fields are empty.";
