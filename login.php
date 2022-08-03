@@ -33,7 +33,6 @@
             echo "Please enter some valid information!";
         }
     }*/
-
 ?>
 
 <!DOCTYPE html>
