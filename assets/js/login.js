@@ -31,7 +31,11 @@ jQuery( document ).ready( function(){
   
     if( '' != message ){
       jQuery( '.validation-message' ).text( message );
-      jQuery('.validation-message').removeClass("hide");
+      jQuery('.validation-message').addClass("show");
+      
+      setTimeout( function(){
+        jQuery('.validation-message').removeClass("show");
+      }, 3000 )
       return false;
     }
   });

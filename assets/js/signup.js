@@ -11,7 +11,7 @@ jQuery( document ).ready( function(){
     var fname = jQuery( this ).find( 'input[name=fullname]' ).val();
     var email = jQuery( this ).find( 'input[name=email]' ).val();
     var password = jQuery( this ).find( 'input[name=password]' ).val();
-    var message = '';
+    var message = "";
     
     if (fname == "" && email == "" && password == "") {
       message = "All fields are empty.";
@@ -40,7 +40,11 @@ jQuery( document ).ready( function(){
 
     if( '' != message ){
       jQuery( '.validation-message' ).text( message );
-      jQuery('.validation-message').removeClass("hide");
+      jQuery('.validation-message').addClass("show");
+
+      setTimeout( function(){
+        jQuery('.validation-message').removeClass("show");
+      }, 3000 )
       return false;
     }
   });
