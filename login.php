@@ -45,13 +45,15 @@
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>    
     <title>Log In</title>
 
-    <script src="assets/js/signup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>    
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/password.js"></script>
 
 </head>
 <body class = "form">
+    <div class="validation-message hide"></div> 
     <div class="all-container">
         <div class="left-container">
             <img src="assets/images/logo.png" alt="name" class="logo">
@@ -67,21 +69,21 @@
                 <h3 class="account-heading">Log In</h3>
             </div>
             
-            <form name="logIn" method="post" class="loginform innerform" action="">
+            <form name="logIn" class="loginform innerform" action="" method="post" id="login-form">
                 <div class="inputs">
                     <label>Email</label>
-                    <input type="email" name="email" required/> 
+                    <input name="email" id="email"/> 
                 </div>    
 
                 <div class="inputs">
                     <label>Password</label>
                     <div class="icon_container">
-                        <input type="password" placeholder="Must be atleast 6 characters" name="password" id="passwordInput">
+                        <input type="password" placeholder="Must be atleast 6 characters" name="password" id="password">
                         <span class="icon"><i class="fa fa-eye" aria-hidden="true" onclick="myFunction()" id="togglePassword"></i></span>                        
                     </div>
                 </div>
 
-                <button class="button-login" type="submit" name="login_form" onclick="validateLogIn()">Log In</button>
+                <button class="button-login" type="submit" >Log In</button>
             </form>
 
             <div class="footer">

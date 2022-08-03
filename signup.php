@@ -35,12 +35,11 @@
     <title>Sign Up</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
     <script src="assets/js/signup.js"></script>
     <script src="assets/js/password.js"></script>
 
 </head>
-<body class ="form">
+<body class = "form">
     <div class="validation-message hide"></div>  
     <div class="all-container">
         <div class="left-container">
@@ -62,7 +61,6 @@
                 <div class="inputs">
                     <label>Full Name</label>
                     <input type="text" name="fullname" id="fullname">
-                    
                 </div>
                 
                 <div class="inputs">
@@ -83,7 +81,7 @@
                     <span class="text-checkbox">Sign up for email updates</span>
                 </div>
 
-                <button class="button-signup" type="submit" value = "Submit" >Sign up</button>
+                <button class="button-signup" type="submit">Sign up</button>
 
                 <p class = "endsentence">By continuing, you agree to accept our Privacy Policy and Terms of Service.</p>
 

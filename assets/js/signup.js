@@ -1,4 +1,3 @@
-
 function validateSignUpEmail(mail){
   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)){
     return true;
@@ -15,32 +14,26 @@ jQuery( document ).ready( function(){
     var message = '';
     
     if (fname == "" && email == "" && password == "") {
-      message = "all fields are empty";
-    }
-    else if (fname == "" && email == ""){
-      message = "name and email are empty";
-    }
-    else if(email == "" && password == ""){
-      message = "email and password are empty";
-    }
-    else if(fname == "" && password == ""){
-      message = "name and password are empty";
-    }
-    else if(fname == ""){
-      message = "name is empty";
-    }
-    else if (email == ""){
-      message = "email is empty";
-    }
-    else{
+      message = "All fields are empty.";
+    }else if (fname == "" && email == ""){
+      message = "Name and email are empty.";
+    }else if(email == "" && password == ""){
+      message = "Email and password are empty.";
+    }else if(fname == "" && password == ""){
+      message = "Name and password are empty.";
+    }else if(fname == ""){
+      message = "Name is empty.";
+    }else if (email == ""){
+      message = "Email is empty.";
+    }else{
       if(password.length < 6){
-        message = "password must be atleast 6 characters";
+        message = "Password must be atleast 6 characters.";
       }
       
       if(email != ""){
         var validate = validateSignUpEmail(email);
         if( !validate ){
-          message += ' Email format not correct';
+          message += ' Email format not correct.';
         }
       }
     }

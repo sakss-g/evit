@@ -1,14 +1,14 @@
   .validation-message{
     position: absolute;
     top: 20px;
-    right: 0;
+    right: 15px;
     padding: 15px;
     border-radius: 5px;
-    background-color: #ff9999;
+    background-color: #fddde6;
     border-left: 10px solid #e30b5d;
   }
 
-  .validation-message.show{
+  /*.validation-message.show{
     animation: show_slide 1s ease forwards; 
   }
 
@@ -25,7 +25,7 @@
     100%{
         transform: translateX(-10px);
     }
-  }
+  }*/
 
   .validation-message.hide{
     display: none;
