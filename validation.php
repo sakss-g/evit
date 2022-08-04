@@ -8,7 +8,6 @@ session_start();
     {
         $email = $_POST['email'];    
         $password = $_POST['password']; 
-        $error = ""; 
         
         if(!empty($email) && !empty($password))
         {
