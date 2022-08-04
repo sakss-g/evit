@@ -1,40 +1,3 @@
-<?php
-/*session_start();
-
-    include("connections.php");
-
-    if(isset($_POST['login_form']))
-    {
-        $email = $_POST['email'];    
-        $password = $_POST['password'];  
-        
-        if(!empty($email) && !empty($password))
-        {
-            $query = "select * from user where email = '$email';";
-            $result = mysqli_query($con, $query);
-
-            if($result)
-            {
-                if($result && mysqli_num_rows($result) > 0)
-                {
-                    $user_data = mysqli_fetch_assoc($result);
-                    
-                    if($user_data['password'] === $password)
-                    {
-                        $_SESSION['id'] = $user_data['id'];
-                        header("Location: login.php");
-                        die;
-                    }
-                }    
-            }
-            echo "Please enter some valid information!";
-        }else
-        {
-            echo "Please enter some valid information!";
-        }
-    }*/
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,7 +31,7 @@
                 <h3 class="account-heading">Log In</h3>
             </div>
             
-            <form name="logIn" class="loginform innerform" action="" method="post" id="login-form">
+            <form name="logIn" class="loginform innerform" action="validation.php" method="post" id="login-form">
                 <div class="inputs">
                     <label>Email</label>
                     <input name="email" id="email"/> 
@@ -82,7 +45,7 @@
                     </div>
                 </div>
 
-                <button class="button-login" type="submit" >Log In</button>
+                <button class="button-login" type="submit" name="submit">Log In</button>
             </form>
 
             <div class="footer">

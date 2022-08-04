@@ -1,5 +1,5 @@
 <?php
-/*session_start();
+session_start();
 
     include("connections.php");
 
@@ -9,18 +9,20 @@
         $email = $_POST['email'];    
         $password = $_POST['password'];  
         
-        if(!empty($name) && !empty($email) && !empty($password) && !is_numeric($name))
-        {
+        if(!empty($name) && !empty($email) && !empty($password) && !is_numeric($name)){
             $query = "insert into user (name, email, password) values ('$name', '$email', '$password');";
-            mysqli_query($con, $query);
-
-            header("Location: login.php");
-            die;
+            
+            if (mysqli_query($con, $query)){
+                header("Location: login.php");
+                die;
+            }else{
+                echo "Query problem";
+            } 
         }else
         {
-            echo "Please enter some valid information!";
+            echo "Empty fields found";
         }
-    }*/
+    }
 ?>
 
 <!DOCTYPE html>
