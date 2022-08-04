@@ -13,7 +13,8 @@ session_start();
         {
             $query = "insert into user (name, email, password) values ('$name', '$email', '$password');";
             
-            if (mysqli_query($con, $query)){
+            if (mysqli_query($con, $query))
+            {
                 header("Location: login.php");
                 die;
             }else{
