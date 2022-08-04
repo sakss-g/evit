@@ -1,39 +1,51 @@
 function validateLogInEmail(mail){
-  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)){
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+  {
     return true;
-  }else{
+  }else
+  {
     return false;
   }
 }
 
-jQuery( document ).ready( function(){
-  jQuery( document ).on( 'submit', 'form.loginform',function(e){
+jQuery( document ).ready( function()
+{
+  jQuery( document ).on( 'submit', 'form.loginform',function(e)
+  {
     var email = jQuery( this ).find( 'input[name=email]' ).val();
     var password = jQuery( this ).find( 'input[name=password]' ).val();
     var message = "";
       
-    if (email == "" && password == "") {
+    if (email == "" && password == "") 
+    {
       message = "All fields are empty.";
-    }else if (email == ""){
+    }
+    else if (email == ""){
       message = "Email is empty.";
-    }else{
-      if(password.length < 6){
+    }
+    else{
+      if(password.length < 6)
+      {
         message = "Password must be atleast 6 characters.";
       }
  
-      if(email != ""){
+      if(email != "")
+      {
         var validate = validateLogInEmail(email);
-        if( !validate ){
+        if( !validate )
+        {
           message += ' Email format not correct.';
         }
       }
     }
   
-    if( '' != message ){
+    if( '' != message )
+    {
       jQuery( '.validation-message' ).text( message );
       jQuery('.validation-message').addClass("show");
       
-      setTimeout( function(){
+      setTimeout( function()
+      {
         jQuery('.validation-message').removeClass("show");
       }, 3000 )
       return false;
