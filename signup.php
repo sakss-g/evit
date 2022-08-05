@@ -1,32 +1,3 @@
-<?php
-session_start();
-
-    include("connections.php");
-
-    if($_SERVER['REQUEST_METHOD'] == "POST")
-    {
-        $name = $_POST['fullname'];   
-        $email = $_POST['email'];    
-        $password = $_POST['password'];  
-        
-        if(!empty($name) && !empty($email) && !empty($password) && !is_numeric($name))
-        {
-            $query = "insert into user (name, email, password) values ('$name', '$email', '$password');";
-            
-            if (mysqli_query($con, $query))
-            {
-                header("Location: login.php");
-                die;
-            }else{
-                echo "Query problem";
-            } 
-        }else
-        {
-            echo "Empty fields found";
-        }
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,7 +32,7 @@ session_start();
                 <p class="signup-heading-login">Already have an account?<a href="login.php">Log In</a></p>
             </div>
 
-            <form name="signUp" class="signupform innerform" action="" method="post" id = "signup-form">
+            <form name="signUp" class="signupform innerform" action="controller/form-action.php" method="post" id = "signup-form">
                 <div class="inputs">
                     <label>Full Name</label>
                     <input type="text" name="fullname" id="fullname">
@@ -85,7 +56,7 @@ session_start();
                     <span class="text-checkbox">Sign up for email updates</span>
                 </div>
 
-                <button class="button-signup" type="submit">Sign up</button>
+                <button class="button-signup" type="submit" name="signup">Sign up</button>
 
                 <p class = "endsentence">By continuing, you agree to accept our Privacy Policy and Terms of Service.</p>
 

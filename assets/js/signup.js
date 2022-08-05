@@ -1,24 +1,20 @@
 function validateSignUpEmail(mail){
-  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
-  {
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)){
     return true;
   }
   else{
     return false;
   }
- }
+}
 
-jQuery( document ).ready( function()
-{
-  jQuery( document ).on( 'submit', 'form.signupform',function(e)
-  {
+jQuery( document ).ready( function(){
+  jQuery( document ).on( 'submit', 'form.signupform',function(e){
     var fname = jQuery( this ).find( 'input[name=fullname]' ).val();
     var email = jQuery( this ).find( 'input[name=email]' ).val();
     var password = jQuery( this ).find( 'input[name=password]' ).val();
     var message = "";
     
-    if (fname == "" && email == "" && password == "") 
-    {
+    if (fname == "" && email == "" && password == "") {
       message = "All fields are empty.";
     }
     else if (fname == "" && email == ""){
@@ -37,13 +33,11 @@ jQuery( document ).ready( function()
       message = "Email is empty.";
     }
     else{
-      if(password.length < 6)
-      {
+      if(password.length < 6){
         message = "Password must be atleast 6 characters.";
       }
       
-      if(email != "")
-      {
+      if(email != ""){
         var validate = validateSignUpEmail(email);
         if( !validate )
         {
@@ -52,8 +46,7 @@ jQuery( document ).ready( function()
       }
     }
 
-    if( '' != message )
-    {
+    if( '' != message ){
       jQuery( '.validation-message' ).text( message );
       jQuery('.validation-message').addClass("show");
 

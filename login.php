@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +18,8 @@
 
 </head>
 <body class = "form">
+    
+    
     <div class="validation-message hide"></div> 
     <div class="all-container">
         <div class="left-container">
@@ -31,7 +36,7 @@
                 <h3 class="account-heading">Log In</h3>
             </div>
             
-            <form name="logIn" class="loginform innerform" action="validation.php" method="post" id="login-form">
+            <form name="logIn" class="loginform innerform" action="controller/form-action.php" method="post" id="login-form">
                 <div class="inputs">
                     <label>Email</label>
                     <input name="email" id="email"/> 
@@ -45,7 +50,7 @@
                     </div>
                 </div>
 
-                <button class="button-login" type="submit" name="submit">Log In</button>
+                <button class="button-login" type="submit" name="login">Log In</button>
             </form>
 
             <div class="footer">
@@ -58,6 +63,15 @@
         <a href="signup.php">
             <img src="assets/images/arrow.png" alt="">
         </a>
+    </div>
+
+    <div class = "error">
+        <?php 
+            if(isset($_SESSION["error"])){
+                echo $_SESSION["error"]; 
+                unset($_SESSION["error"]);
+            }; 
+        ?>
     </div>
 
 </body>
