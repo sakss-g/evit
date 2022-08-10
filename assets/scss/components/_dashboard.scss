@@ -1,55 +1,14 @@
-.sidebar{
-    width: 270px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.sidebar-logo{
-    height: auto;
-    padding : 1.5rem 0rem 2.5rem 2rem;
-    justify-content: center;
-    color: #343434;
-}
-
-.sidebar-logo h3{
-    font-weight: 800;
-}
-
-.sidebar-logo span{
-    display: inline-block;
-    padding-right: 1rem;
-}
-
-.sidebar-menu li{
-    margin-top: 1rem;
-    width: 100%;
-    margin-bottom: 2.5rem;
-    padding-left: 2rem;
-}
-
-.sidebar-menu a{
-    color: #696969; 
-    display: block;
-    font-size: 1rem;
-}
-
-.sidebar-menu span{
-    padding-right: 1rem;
-}
-
-.main-content{
-    margin-left: 270px;
-}
+@import 'responsive';
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     padding: 1rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     position: relative;
+    float: right;
+    width: 83%;
+    height: 80px;
 }
 
 header .fa{
@@ -60,7 +19,7 @@ header .fa{
 
 .search-wrapper {
     height: 50px;
-    width: 85%;
+    width: 80%;
     display: flex;
     align-items: center;
 }
@@ -79,21 +38,71 @@ header .fa{
     display: flex;
     align-items: center;
     color: #696969;
+    width: 20%;
+    justify-content: flex-end;
 }
 
 .user-wrapper span{
     padding-left: 1rem;
 }
 
+.sidebar{
+    position: absolute;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 100vh;
+    z-index: 11;
+    width: 258px;
+}
+
+.company-logo{
+    height: auto;
+    padding : 1.5rem 0rem 2.5rem 2rem;
+    justify-content: center;
+    color: #343434;
+}
+
+.company-logo h3{
+    font-weight: 800;
+}
+
+.company-logo span{
+    display: inline-block;
+    padding-right: 1rem;
+}
+
+.sidebar-menu li{
+    margin-top: 1rem;
+    width: 100%;
+    margin-bottom: 2.5rem;
+    padding-left: 2rem;
+    list-style-type: none;
+}
+
+.sidebar-menu a{
+    color: #696969; 
+    display: block;
+    font-size: 1rem;
+}
+
+.sidebar-menu span{
+    padding-right: 1rem;
+}
+
+.board{
+    padding-left: 260px;
+}
+
 .user-management-container{
-    margin-top: 7rem;
+    padding: 130px 100px;
 }
 
 .user-management-container table{
     border-collapse: collapse;
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 .user-header{
@@ -137,6 +146,15 @@ tbody td{
     padding: .5rem 0;
 }
 
+#action{
+    color: #289ae7;
+    padding: 0.5rem;
+}
+
+.fa-circle-xmark{
+    color: red;
+}
+
 .img-name{
     display: flex;
     align-items: center;
@@ -150,28 +168,14 @@ tbody img{
     margin: 1rem;
 }
 
-#action{
-    color: #289ae7;
-    padding: 0.5rem;
-}
-
-.fa-circle-xmark{
-    color: red;
-}
-
 .footer{
     display: flex;
     justify-content: space-between;
-    padding: 0 8rem;
+    width: 100%;
 }
 
 b{
     font-weight: 600;
-}
-
-.table-responsive{
-    width: 100%;
-    overflow-x: auto;
 }
 
 td{
