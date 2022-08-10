@@ -21,7 +21,7 @@
             <img src="assets/images/logo.png" alt="name" class="logo">
             <div class="overlay">
                 <h3 class="overlay-heading">Welcome to eagle visionit</h3>
-                <p class="overlay-account">Don't have an account? <a href="login.php">Login Now.</a></p>
+                <p class="overlay-account">Don't have an account? <a href="index.php">Login Now.</a></p>
             </div>
         </div>
 
@@ -29,7 +29,7 @@
             <div class="header">
                 <h2 class="line-heading">Share Your awesomeness</h2>
                 <h3 class="account-heading">Sign Up</h3>
-                <p class="signup-heading-login">Already have an account?<a href="login.php">Log In</a></p>
+                <p class="signup-heading-login">Already have an account?<a href="index.php">Log In</a></p>
             </div>
 
             <form name="signUp" class="signupform innerform" action="controller/form-action.php" method="post" id = "signup-form">
@@ -69,7 +69,7 @@
     </div>
 
     <div class="arrow-signup">
-        <a href="login.php">
+        <a href="index.php">
             <img src="assets/images/arrow.png" alt="">
         </a>
     </div>

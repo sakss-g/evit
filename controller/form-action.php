@@ -8,7 +8,7 @@ if( isset( $_POST[ 'signup' ] ) ){
     $password = $_POST['password'];  
     $encryptpw = md5($password);
    
-    $user->user_insert( $name, $email, $password );
+    $user->user_insert( $name, $email, $encryptpw );
 }
 
 if( isset( $_POST[ 'login' ] ) ){
