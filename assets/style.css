@@ -405,10 +405,63 @@ header {
   width: 83%;
   height: 80px;
 }
+@media (max-width: 767px) {
+  header {
+    width: 100%;
+  }
+}
+@media (max-width: 998px) {
+  header {
+    width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  header {
+    width: 100%;
+  }
+}
+@media (max-width: 1500px) {
+  header {
+    width: 100%;
+  }
+}
 
-header .fa {
+.sidebar-btn {
   position: absolute;
-  padding-left: 1rem;
+  height: 30px;
+  width: 25px;
+  background: none;
+  border: none;
+  padding: 2px;
+}
+
+.fa-bars {
+  display: none;
+}
+@media (max-width: 767px) {
+  .fa-bars {
+    display: contents;
+  }
+}
+@media (max-width: 998px) {
+  .fa-bars {
+    display: contents;
+  }
+}
+@media (max-width: 1200px) {
+  .fa-bars {
+    display: contents;
+  }
+}
+@media (max-width: 1500px) {
+  .fa-bars {
+    display: contents;
+  }
+}
+
+header .fa-magnifying-glass {
+  position: absolute;
+  padding-left: 3rem;
   color: #696969;
 }
 
@@ -424,12 +477,13 @@ header .fa {
   padding: 0.5rem;
   border: none;
   outline: none;
-  padding-left: 3rem;
+  padding-left: 5rem;
   width: 100%;
   font-size: 1rem;
 }
 
 .user-wrapper {
+  height: 50px;
   display: flex;
   align-items: center;
   color: #696969;
@@ -448,6 +502,48 @@ header .fa {
   height: 100vh;
   z-index: 11;
   width: 258px;
+}
+@media (max-width: 767px) {
+  .sidebar {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.7s, opacity 1s;
+  }
+}
+@media (max-width: 998px) {
+  .sidebar {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.7s, opacity 1s;
+  }
+}
+@media (max-width: 1200px) {
+  .sidebar {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.7s, opacity 1s;
+  }
+}
+@media (max-width: 1500px) {
+  .sidebar {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.7s, opacity 1s;
+  }
+}
+@media (min-width: 1800px) {
+  .sidebar {
+    width: 300px;
+  }
+}
+
+.sidebar-dash {
+  position: absolute;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 100vh;
+  width: 100%;
+  display: block;
 }
 
 .company-logo {
@@ -487,9 +583,34 @@ header .fa {
 .board {
   padding-left: 260px;
 }
+@media (max-width: 767px) {
+  .board {
+    padding: 0;
+  }
+}
+@media (max-width: 998px) {
+  .board {
+    padding: 0;
+  }
+}
+@media (max-width: 1200px) {
+  .board {
+    padding: 0;
+  }
+}
+@media (max-width: 1500px) {
+  .board {
+    padding: 0;
+  }
+}
 
 .user-management-container {
   padding: 130px 100px;
+}
+@media (max-width: 767px) {
+  .user-management-container {
+    padding: 130px 10px;
+  }
 }
 
 .user-management-container table {

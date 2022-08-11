@@ -9,11 +9,58 @@ header {
     float: right;
     width: 83%;
     height: 80px;
+
+    @include for-mobile{
+        width: 100%;
+    }
+
+    @include for-tablet-portrait{
+        width: 100%;
+    }
+
+    @include for-tablet{
+        width: 100%;
+    }
+
+    @include for-desktop{
+        width: 100%;
+    }
 }
 
-header .fa{
+.sidebar-btn{
     position: absolute;
-    padding-left: 1rem;
+    //top: 0;
+    height: 30px;
+    width: 25px;
+    background: none;
+    border: none;
+    padding: 2px;
+}
+
+.fa-bars{
+    display: none;
+
+    @include for-mobile{
+        display: contents;
+        
+    }
+
+    @include for-tablet-portrait{
+        display: contents;
+    }
+
+    @include for-tablet{
+        display: contents;
+    }
+
+    @include for-desktop{
+        display: contents;
+    }
+}
+
+header .fa-magnifying-glass{
+    position: absolute;
+    padding-left: 3rem;
     color: #696969;
 }
 
@@ -29,12 +76,13 @@ header .fa{
     padding: .5rem;
     border: none;
     outline: none;
-    padding-left: 3rem;
+    padding-left: 5rem;
     width: 100%;
     font-size: 1rem;
 }
 
 .user-wrapper{
+    height: 50px;
     display: flex;
     align-items: center;
     color: #696969;
@@ -53,7 +101,49 @@ header .fa{
     height: 100vh;
     z-index: 11;
     width: 258px;
+
+    @include for-mobile{
+        transform: translateX(-100%);
+        opacity:0;
+        transition: transform .7s, opacity 1s;
+    }
+
+    @include for-tablet-portrait{
+        transform: translateX(-100%);
+        opacity:0;
+        transition: transform .7s, opacity 1s;
+    }
+
+    @include for-tablet{
+        transform: translateX(-100%);
+        opacity:0;
+        transition: transform .7s, opacity 1s;
+    }
+
+    @include for-desktop{
+        transform: translateX(-100%);
+        opacity:0;
+        transition: transform .7s, opacity 1s;
+    }
+
+    @include for-desktop-big{
+        width: 300px;
+    }
 }
+
+.sidebar-dash{
+    position: absolute;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 100vh;
+    //z-index: 11;
+    width: 100%;
+    display: block;
+}
+
+// .menu_show {
+// 	left: 0!important;
+// }
 
 .company-logo{
     height: auto;
@@ -91,10 +181,30 @@ header .fa{
 
 .board{
     padding-left: 260px;
+    
+    @include for-mobile{
+        padding:0;
+    }
+
+    @include for-tablet-portrait{
+        padding:0;
+    }
+
+    @include for-tablet{
+        padding:0;
+    }
+
+    @include for-desktop{
+        padding:0;
+    }
 }
 
 .user-management-container{
     padding: 130px 100px;
+
+    @include for-mobile{
+        padding: 130px 10px;
+    }
 }
 
 .user-management-container table{
@@ -102,7 +212,6 @@ header .fa{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    
 }
 
 .user-header{
