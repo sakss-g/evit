@@ -26,7 +26,13 @@
         </div>
 
         <div class="user-wrapper">
-            <h4>User_name <span class="fa-solid fa-angle-down"></span></h4>
+            <h4>User_name</h4> 
+            <div class = "dropdown">
+                <button class="dropbtn"><span class="fa-solid fa-angle-down" id="dropdown"></span></button>
+                <div class="dropdown-content">
+                    <a href="../index.php">Logout</a>
+                </div>
+            </div>
         </div>
     </header>
     

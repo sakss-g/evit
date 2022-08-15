@@ -11,7 +11,7 @@ class UserController extends Database{
             );
             $insert = $this->insert( 'user', $data );
             if( $insert ){
-               header( 'Location: ../login.php' );
+               header( 'Location: ../index.php' );
             }else{
                 echo 'user not added';
             }
@@ -30,10 +30,10 @@ class UserController extends Database{
             $select = $this->select( 'user',$data );
             if(count( $select ) == 1 ){
                 $get_data = $select[0];
-                header( 'Location: ../login.php' );
+                header( 'Location: ../view/dashboard.php' );
             }else{
                 $_SESSION['error'] = 'User not found' ;
-                header( 'Location: ../login.php' );
+                header( 'Location: ../index.php' );
             }
         }else{
             echo "Empty fields found";

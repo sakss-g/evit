@@ -37,6 +37,7 @@ header .fa-magnifying-glass{
     width: 100%;
     font-size: 1rem;
 }
+
 .search{
     justify-content: space-between;
     display: flex;
@@ -52,8 +53,40 @@ header .fa-magnifying-glass{
     justify-content: flex-end;
 }
 
-.user-wrapper span{
+.dropdown {
+    position: relative;
+    display: inline-block;
+}  
+
+button.dropbtn {
+    border: none;
+    background: white;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #696969;
+    text-decoration: none;
+    display: block;
+    background: white;
+}
+
+.dropdown span{
     padding-left: 1rem;
+    padding-right: 1.5rem;
+    color: #696969;
 }
 
 .company-logo{
@@ -210,7 +243,7 @@ header {
 #bars {
     cursor: pointer;
     padding: 10px 10px 10px 0;
-    color: black;
+    color: #696969;
 }
 
 .show-sidebar {

@@ -13,7 +13,7 @@ if( isset( $_POST[ 'signup' ] ) ){
 
 if( isset( $_POST[ 'login' ] ) ){
     $email = $_POST[ 'email' ];
-    $password = $_POST[ 'password' ];
+    $password = md5($_POST[ 'password' ]);
 
     $user->user_select( $email, $password );
 }

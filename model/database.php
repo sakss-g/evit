@@ -46,7 +46,6 @@ class Database{
 
     public function select( $table, $fields = false ){
         $data = [];
-        //query = "select * from user where email = '$email';";
         if( $fields ){
             $sql = 'SELECT * FROM ' . $table. ' WHERE ';
 
@@ -55,7 +54,6 @@ class Database{
             }
         }
         $sql = rtrim( $sql, ' and ' );
-        // echo $sql; die;
         $query = mysqli_query( $this->conn, $sql);
         
         if( $query -> num_rows > 0 ){
