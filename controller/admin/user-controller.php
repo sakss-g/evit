@@ -20,8 +20,9 @@ class UserController extends Database{
         }
     }
 
-    public function user_select( $email, $password ){
+    public function login( $email, $password ){
         $error = "";
+  
         if( !empty( $email ) && !empty( $password ) ){
             $data = array(
                 'email' => $email,
@@ -29,8 +30,14 @@ class UserController extends Database{
             );
             $select = $this->select( 'user',$data );
             if(count( $select ) == 1 ){
-                $get_data = $select[0];
+                $cookie_data = array(
+                    'id' => $select[0]['id'],
+                    'name' => $select[0]['name'],
+                    'email' => $select[0]['email']
+                );
+                echo "<pre>";
                 header( 'Location: ../view/dashboard.php' );
+                setcookie("evit_loggedin_user", json_encode($cookie_data), time() + (86400 * 30), "/");
             }else{
                 $_SESSION['error'] = 'User not found' ;
                 header( 'Location: ../index.php' );

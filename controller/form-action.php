@@ -1,4 +1,5 @@
-<?php    session_start();
+<?php    
+session_start();
 include( "admin/user-controller.php");
 $user = new UserController();
 
@@ -15,5 +16,5 @@ if( isset( $_POST[ 'login' ] ) ){
     $email = $_POST[ 'email' ];
     $password = md5($_POST[ 'password' ]);
 
-    $user->user_select( $email, $password );
+    $user->login( $email, $password );
 }

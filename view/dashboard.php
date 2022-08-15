@@ -1,3 +1,8 @@
+<?php 
+    //session_start();
+    require_once '../model/database.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +31,14 @@
         </div>
 
         <div class="user-wrapper">
-            <h4>User_name</h4> 
+            <h4>
+                <?php
+                    if(isset($_COOKIE["evit_loggedin_user"])) {
+                        $cookie_data = json_decode( $_COOKIE["evit_loggedin_user"], true );
+                        echo $cookie_data[ 'name' ];
+                    } 
+                ?>
+            </h4> 
             <div class = "dropdown">
                 <button class="dropbtn"><span class="fa-solid fa-angle-down" id="dropdown"></span></button>
                 <div class="dropdown-content">
