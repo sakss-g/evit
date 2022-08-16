@@ -1,6 +1,8 @@
-<?php 
-    //session_start();
-    require_once '../model/database.php';
+<?php
+    require_once "../model/database.php";
+    $db = new Database();
+    $data = array( '*' );
+    $select = $db->select( 'user',$data );
 ?>
 
 <!DOCTYPE html>
@@ -93,29 +95,42 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td class="img-name"><img src="../assets/images/ts.jpg">Taylor Swift</td>
-                        <td>1989/12/13</td>
-                        <td>Admin</td>
-                        <td><span class="fa-solid fa-gear" id="action"></span> <span class="fa-solid fa-circle-xmark"></span></td>
-                    </tr>
+                <?php if( $select ): 
+                    foreach( $select as $s ):?>
+                        <tr>
+                            <td><?php echo $s['id'];?></td>
+                            <td class="img-name"><img src="../assets/images/ts.jpg"><?php echo $s['name']; ?></td>
+                            <td>
+                                <?php 
+                                    $date = strtotime( $s['date'] );
+                                    echo date( 'd/m/Y', $date );
+                                ?>
+                            </td>
+                            <td><?php echo $s['role'];?></td>
+                            <td>
+                                <span class="fa-solid fa-gear" id="action"></span>
+                                <span class="fa-solid fa-circle-xmark"></span>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
 
-                    <tr>
+                <?php endif; ?>                   
+
+                    <!-- <tr>
                         <td>2</td>
                         <td class="img-name"><img src="../assets/images/hs.jpg">Harry Styles</td>
                         <td>1994/02/04</td>
                         <td>Publisher</td>
                         <td><span class="fa-solid fa-gear" id="action"></span> <span class="fa-solid fa-circle-xmark"></span></td>
-                    </tr>
+                    </tr> -->
 
-                    <tr>
+                    <!-- <tr>
                         <td>3</td>
                         <td class="img-name"><img src="../assets/images/cg.jpg">Conan Gray</td>
                         <td>1998/12/05</td>
                         <td>Publisher</td>
                         <td><span class="fa-solid fa-gear" id="action"></span> <span class="fa-solid fa-circle-xmark"></span></td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
 
@@ -124,9 +139,6 @@
                 <h4>Previous 1 2 3 4 5 Next</h4>
             </div>
         </div>
-    </div> 
-
-    
-    
+    </div>   
 </body>
 </html>

@@ -44,16 +44,26 @@ class Database{
 
     }
 
-    public function select( $table, $fields = false ){
+    public function select( $table, $fields = false, $conditions = false ){
         $data = [];
+        $sql = 'SELECT ';
         if( $fields ){
-            $sql = 'SELECT * FROM ' . $table. ' WHERE ';
+            foreach( $fields as $field ){
+                $sql .= $field . ',';
+            }
 
-            foreach( $fields as $key => $field ){
-                $sql .= $key . '="' . $field . '" and ';
+            $sql = rtrim( $sql, ',' );
+        }
+        $sql .= ' FROM ' . $table;
+
+        if( $conditions ){
+            $sql .= ' WHERE ';
+            foreach( $conditions as $key => $condition ){
+                $sql .= $key . '="' . $condition . '" and ';
             }
         }
         $sql = rtrim( $sql, ' and ' );
+
         $query = mysqli_query( $this->conn, $sql);
         
         if( $query -> num_rows > 0 ){
@@ -61,7 +71,12 @@ class Database{
                 $data[] = $row;
             }
         }
-        return $data;
+        if( !empty( $data ) ){
+            return $data;
+        }
+
+        return false;
+       
     }
 
 }

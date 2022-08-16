@@ -28,14 +28,14 @@ class UserController extends Database{
                 'email' => $email,
                 'password' => $password
             );
-            $select = $this->select( 'user',$data );
+            $select = $this->select( 'user',array( '*' ), $data );
             if(count( $select ) == 1 ){
                 $cookie_data = array(
                     'id' => $select[0]['id'],
                     'name' => $select[0]['name'],
                     'email' => $select[0]['email']
                 );
-                echo "<pre>";
+                
                 header( 'Location: ../view/dashboard.php' );
                 setcookie("evit_loggedin_user", json_encode($cookie_data), time() + (86400 * 30), "/");
             }else{
