@@ -29,7 +29,8 @@ class UserController extends Database{
                 'password' => $password
             );
             $select = $this->select( 'user',array( '*' ), $data );
-            if(count( $select ) == 1 ){
+
+            if( $select ){
                 $cookie_data = array(
                     'id' => $select[0]['id'],
                     'name' => $select[0]['name'],
@@ -45,6 +46,14 @@ class UserController extends Database{
         }else{
             echo "Empty fields found";
         }
+    }
+
+    public function user_delete( $id ){
+        $id = array(
+            'id' => $id
+        );
+
+        $delete = $this->delete( 'user', $id );
     }
 
 }

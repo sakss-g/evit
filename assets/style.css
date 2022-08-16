@@ -645,6 +645,7 @@ header {
   opacity: 1;
   visibility: visible;
   z-index: 99;
+  height: auto;
 }
 .show-sidebar .board {
   padding-left: 260px;

@@ -18,3 +18,18 @@ if( isset( $_POST[ 'login' ] ) ){
 
     $user->login( $email, $password );
 }
+
+if( isset( $_GET[ 'id' ] )&& isset( $_GET[ 'action' ])){
+    $id = $_GET[ 'id' ];
+
+    $user->user_delete( $id );
+}
+
+
+// if( isset( $_POST[ 'update' ] )){
+//     $name = $_POST[ 'name' ];
+//     $email = $_POST[ 'email' ];
+//     $password = $_POST['password'];  
+
+//     $suer->update( $name, $email, $password );
+// }

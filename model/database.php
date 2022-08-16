@@ -17,7 +17,6 @@ class Database{
     }
 
     public function insert( $table, $fields = false ){
-        // INSERT INTO	friend SET name = 'Kim', relation= 'good';
 
         if( $fields ){
             $sql = 'INSERT INTO ' . $table. ' SET ';
@@ -34,14 +33,6 @@ class Database{
             }
         } 
         return false;
-    }
-
-    public function update(){
-
-    }
-    
-    public function delete(){
-
     }
 
     public function select( $table, $fields = false, $conditions = false ){
@@ -62,8 +53,8 @@ class Database{
                 $sql .= $key . '="' . $condition . '" and ';
             }
         }
+        
         $sql = rtrim( $sql, ' and ' );
-
         $query = mysqli_query( $this->conn, $sql);
         
         if( $query -> num_rows > 0 ){
@@ -73,10 +64,40 @@ class Database{
         }
         if( !empty( $data ) ){
             return $data;
+        }else{
+            return false;
         }
-
-        return false;
-       
     }
+    
+    public function delete( $table, $fields = false ){
+        $sql = ' DELETE  FROM ' . $table;
+
+        if( $fields ){
+            $sql .= ' WHERE ';
+            foreach( $fields as $key => $field ){
+                $sql .= $key . '=' . $field;
+            }
+        }
+        $query = mysqli_query( $this->conn, $sql);
+        header("location: ../view/dashboard.php");
+    }
+
+    public function update(){
+
+    }
+
+    // public function delete( $id){
+    //     $sql = "DELETE FROM 'user' WHERE 'id' = '$id'"; 
+    //     $query = mysqli_query( $this->conn, $sql);
+        
+    //     //mysqli_query($conn, "DELETE FROM 'user' WHERE 'id' = '$id'");
+
+    //     // if( $id ){
+    //     //     $result = $this -> delete_query('user', $id);
+    //     //     if($result){
+    //     //         header("location: ../../view/dashboard.php");
+    //     //     }
+    //     // }
+    // }
 
 }

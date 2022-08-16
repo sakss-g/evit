@@ -47,7 +47,7 @@
                     <label>Password</label>
                     <div class="icon_container">
                         <input type="password" placeholder="Must be atleast 6 characters" id="password" name="password">
-                        <span class="icon"><i class="fa fa-eye" aria-hidden="true" onclick="myFunction()" id="togglePassword"></i></span>
+                        <span class="icon"><i class="fa fa-eye" aria-hidden="true" id="togglePassword"></i></span>
                     </div>
                 </div>
 

@@ -103,19 +103,20 @@
                             <td>
                                 <?php 
                                     $date = strtotime( $s['date'] );
-                                    echo date( 'd/m/Y', $date );
+                                    echo date( 'Y/m/d', $date );
                                 ?>
                             </td>
                             <td><?php echo $s['role'];?></td>
                             <td>
-                                <span class="fa-solid fa-gear" id="action"></span>
-                                <span class="fa-solid fa-circle-xmark"></span>
+                                <a href="../signup.php?id=<?php echo $s['id'];?>" name="update"><span class="fa-solid fa-gear" id="action"></span></a>
+                                <a href="../controller/form-action.php?id=<?php echo $s['id'];?>&&action=delete"><span class="fa-solid fa-circle-xmark"></span></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
 
                 <?php endif; ?>                   
-
+                    
+                    <!-- signup.php?id=php echo $d['id']; ?>" class="update-btn"    -->
                     <!-- <tr>
                         <td>2</td>
                         <td class="img-name"><img src="../assets/images/hs.jpg">Harry Styles</td>
