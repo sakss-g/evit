@@ -10,4 +10,6 @@ jQuery( document ).ready( function(){
     jQuery( document ).on('click', '#delete-btn', function(){
         return confirm('Are you sure you want to delete?');
     });
+
+    //jQuery
 } );
