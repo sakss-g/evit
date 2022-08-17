@@ -1,3 +1,8 @@
+<?php
+    require_once 'model/database.php';
+    $is_update = isset( $_GET[ 'id' ] ) && '' != $_GET[ 'id' ] ? true : false;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,37 +31,59 @@
         </div>
 
         <div class="right-container right-signup">
+
+            <?php
+                $db = new Database();
+
+                if(isset($_GET['id'])):
+                    $id= $_GET['id'];
+
+                    $condition = array(
+                        'id' =>  $id,
+                    );
+
+                    $data = $db -> select( 'user', array('*'), $condition ) ;
+                    if( !empty( $data ) ){
+                        $data = $data[0];
+                    }
+                endif; 
+            ?>
+
             <div class="header">
                 <h2 class="line-heading">Share Your awesomeness</h2>
-                <h3 class="account-heading">Sign Up</h3>
+                <h3 class="account-heading"><?php echo $is_update ? 'Update' : 'Sign Up'; ?></h3>
                 <p class="signup-heading-login">Already have an account?<a href="index.php">Log In</a></p>
-            </div>
+            </div>          
 
             <form name="signUp" class="signupform innerform" action="controller/form-action.php" method="post" id = "signup-form">
                 <div class="inputs">
-                    <label>Full Name</label>
-                    <input type="text" name="fullname" id="fullname">
+                    <label>Full Name</label> 
+                    <input type="text" name="fullname" id="fullname" value="<?php echo $is_update ? $data[ 'name' ] : '' ; ?>">
                 </div>
                 
                 <div class="inputs">
                     <label>Email</label>
-                    <input name="email" id="email"/> 
+                    <input name="email" id="email" value="<?php echo $is_update ? $data[ 'email' ] : ''; ?>">
                 </div>
                 
                 <div class="inputs">
                     <label>Password</label>
                     <div class="icon_container">
-                        <input type="password" placeholder="Must be atleast 6 characters" id="password" name="password">
+                        <input type="password" placeholder="Must be atleast 6 characters" id="password" name="password" value="">
                         <span class="icon"><i class="fa fa-eye" aria-hidden="true" id="togglePassword"></i></span>
                     </div>
                 </div>
+                
+                <?php if( $is_update ){ ?>
+                    <input type="hidden" value="<?php echo $_GET[ 'id' ];?>" name="userid">
+                <?php } ?> 
 
                 <div class="updates-container">
                     <input type="checkbox" name="item" class="checkbox" unchecked/>
                     <span class="text-checkbox">Sign up for email updates</span>
                 </div>
 
-                <button class="button-signup" type="submit" name="signup">Sign up</button>
+                <button class="button-signup" type="submit" name="<?php echo $is_update ? 'edit' : 'signup' ?>"><?php echo $is_update ? 'UPDATE' : 'SIGN UP'; ?></button>
 
                 <p class = "endsentence">By continuing, you agree to accept our Privacy Policy and Terms of Service.</p>
 

@@ -82,22 +82,18 @@ class Database{
         header("location: ../view/dashboard.php");
     }
 
-    public function update(){
+    public function update( $table, $fields, $id ){
+        $sql = ' UPDATE ' .$table .' SET ';
 
+        foreach( $fields as $key => $field ){
+            $sql .= $key .'="' .$field .'",';
+        }
+
+        $sql = rtrim( $sql, ',' );
+        $sql .= ' WHERE id= '.$id;
+
+        $query = mysqli_query( $this->conn, $sql);
+
+        return $query;
     }
-
-    // public function delete( $id){
-    //     $sql = "DELETE FROM 'user' WHERE 'id' = '$id'"; 
-    //     $query = mysqli_query( $this->conn, $sql);
-        
-    //     //mysqli_query($conn, "DELETE FROM 'user' WHERE 'id' = '$id'");
-
-    //     // if( $id ){
-    //     //     $result = $this -> delete_query('user', $id);
-    //     //     if($result){
-    //     //         header("location: ../../view/dashboard.php");
-    //     //     }
-    //     // }
-    // }
-
 }

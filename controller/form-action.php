@@ -25,11 +25,11 @@ if( isset( $_GET[ 'id' ] )&& isset( $_GET[ 'action' ])){
     $user->user_delete( $id );
 }
 
+if (isset($_POST[ 'edit' ])){
+    $id = $_POST['userid'];
+    $name = $_POST['fullname'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-// if( isset( $_POST[ 'update' ] )){
-//     $name = $_POST[ 'name' ];
-//     $email = $_POST[ 'email' ];
-//     $password = $_POST['password'];  
-
-//     $suer->update( $name, $email, $password );
-// }
+    $user -> user_update($id, $name, $email, $password);
+}

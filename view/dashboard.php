@@ -108,7 +108,7 @@
                             </td>
                             <td><?php echo $s['role'];?></td>
                             <td>
-                                <a href="../signup.php?id=<?php echo $s['id'];?>" name="update" id="edit-btn"><span class="fa-solid fa-gear" id="action"></span></a>
+                                <a href="../signup.php?id=<?php echo $s['id'];?>" id="edit-btn" name="edit"><span class="fa-solid fa-gear" id="action"></span></a>
                                 <a href="../controller/form-action.php?id=<?php echo $s['id'];?>&&action=delete" id="delete-btn"><span class="fa-solid fa-circle-xmark"></span></a>
                             </td>
                         </tr>

@@ -56,4 +56,19 @@ class UserController extends Database{
         $delete = $this->delete( 'user', $id );
     }
 
+    public function user_update( $id, $name, $email, $password ){
+        $d_pass = md5($password);
+        //echo $d_pass;die;
+        $fields = array(
+            'name' => $name,
+            'email' => $email,
+            'password' => $d_pass,
+        );
+        $result = $this -> update('user', $fields, $id);
+        
+        if($result){
+            header('Location: ../view/dashboard.php');
+        }
+    }
+
 }
