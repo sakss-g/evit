@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../assets/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="../assets/js/dashboard-menu.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
 
     <title>Dashboard</title>
 
@@ -50,7 +50,7 @@
         </div>
     </header>
     
-    <div class="sidebar ">
+    <div class="sidebar">
         <a href="#" class="close"><i class="fa-solid fa-xmark"></i></a>
         <div class="company-logo">
             <h3><span class="fa fa-circle-plus"></span>EVIT Dashboard</h3>
@@ -109,29 +109,12 @@
                             <td><?php echo $s['role'];?></td>
                             <td>
                                 <a href="../signup.php?id=<?php echo $s['id'];?>" name="update"><span class="fa-solid fa-gear" id="action"></span></a>
-                                <a href="../controller/form-action.php?id=<?php echo $s['id'];?>&&action=delete"><span class="fa-solid fa-circle-xmark"></span></a>
+                                <a href="../controller/form-action.php?id=<?php echo $s['id'];?>&&action=delete" id="delete-btn"><span class="fa-solid fa-circle-xmark"></span></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
 
                 <?php endif; ?>                   
-                    
-                    <!-- signup.php?id=php echo $d['id']; ?>" class="update-btn"    -->
-                    <!-- <tr>
-                        <td>2</td>
-                        <td class="img-name"><img src="../assets/images/hs.jpg">Harry Styles</td>
-                        <td>1994/02/04</td>
-                        <td>Publisher</td>
-                        <td><span class="fa-solid fa-gear" id="action"></span> <span class="fa-solid fa-circle-xmark"></span></td>
-                    </tr> -->
-
-                    <!-- <tr>
-                        <td>3</td>
-                        <td class="img-name"><img src="../assets/images/cg.jpg">Conan Gray</td>
-                        <td>1998/12/05</td>
-                        <td>Publisher</td>
-                        <td><span class="fa-solid fa-gear" id="action"></span> <span class="fa-solid fa-circle-xmark"></span></td>
-                    </tr> -->
                 </tbody>
             </table>
 
