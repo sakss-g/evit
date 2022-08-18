@@ -5,9 +5,11 @@
   }
 
   .footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
     color: #696969;
     margin-top: 1rem;
-    width: 100%;
 
     @include for-mobile{
       margin-top: 0.3rem;

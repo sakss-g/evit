@@ -335,9 +335,11 @@ html {
 }
 
 .footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   color: #696969;
   margin-top: 1rem;
-  width: 100%;
 }
 @media (max-width: 767px) {
   .footer {
@@ -597,12 +599,6 @@ tbody img {
   margin: 1rem;
 }
 
-.footer {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
 b {
   font-weight: 600;
 }
@@ -665,6 +661,40 @@ header {
 a.close {
   float: right;
   padding: 1rem;
+}
+
+.dashboard-footer {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+}
+
+.page-no {
+  display: flex;
+  width: 225px;
+  justify-content: space-between;
+}
+
+.page-no a {
+  color: black;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.previous:hover {
+  background: #289ae7;
+  color: white;
+}
+
+.next:hover {
+  background: #289ae7;
+  color: white;
+}
+
+.page-no a.active {
+  background: #289ae7;
+  color: #fff;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -71,4 +71,14 @@ class UserController extends Database{
         }
     }
 
+    public function get_user_ajax( $page_id ){
+        if( $page_id ){
+            $formula = ( $page_id - 1 ) * 3;
+            $select = $this->get_user_ajax( 'user', $formula ,3 );
+
+            
+        }
+
+    }
+
 }

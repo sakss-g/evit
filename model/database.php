@@ -96,4 +96,21 @@ class Database{
 
         return $query;
     }
+
+    public function get_user_ajax( $table, $offset, $limit ){
+        //select * from student limit {$offset}, {$limit}";
+        $sql = 'SELECT * FROM ' . $table . ' LIMIT ' . $offset . ',' . $limit;
+        $query = mysqli_query( $this->conn, $sql);
+        
+        if( $query ->num_rows > 0 ){
+            while($row = $query->fetch_assoc()){
+                $data[] = $row;
+            }
+        }
+        if( !empty( $data ) ){
+            return $data;
+        }else{
+            return false;
+        }
+    }
 }

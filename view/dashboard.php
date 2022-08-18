@@ -2,7 +2,7 @@
     require_once "../model/database.php";
     $db = new Database();
     $data = array( '*' );
-    $select = $db->select( 'user',$data );
+    $select = $db->get_user_ajax( 'user',0 ,3 );
 ?>
 
 <!DOCTYPE html>
@@ -80,7 +80,7 @@
 
     <div class="board">
         <div class="user-management-container">
-            <table rules="rows">
+            <table rules="rows" id="user-table">
                 <thead>
                     <tr class="user-header">
                         <td colspan="3" class="heading"><h2>User Management</h2></td>
@@ -118,9 +118,17 @@
                 </tbody>
             </table>
 
-            <div class="footer">
-                <h4>Showing <b>5</b> out of <b>25</b> entries</h4>
-                <h4>Previous 1 2 3 4 5 Next</h4>
+            <?php $pagination_data = $db -> select( 'user',array("*") );
+            $max = ceil( count( $pagination_data )/3 );?>
+
+            <div class="dashboard-footer" data-max-page="<?php echo $max ?>">
+                <div class="page-no">
+                    <a href="#" class="previous">Previous</a>
+                    <?php for( $i=1; $i <= $max; $i ++ ){ ?>
+                        <a href="#" class="<?php echo $i == 1 ? 'active' : '' ?>"><?php echo $i; ?></a>
+                    <?php } ?>
+                    <a href="#" class="next">Next</a>
+                </div>
             </div>
         </div>
     </div>   
