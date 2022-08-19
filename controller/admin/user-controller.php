@@ -74,11 +74,32 @@ class UserController extends Database{
     public function get_user_ajax( $page_id ){
         if( $page_id ){
             $formula = ( $page_id - 1 ) * 3;
-            $select = $this->get_user_ajax( 'user', $formula ,3 );
+            $select = $this->db_get_user_ajax( 'user', $formula ,3 );
 
+            if( $select ){
+                echo '<tbody>';
+                foreach( $select as $s ){?>
+                    <tr>
+                        <td><?php echo $s['id'];?></td>
+                        <td class="img-name"><img src="../assets/images/t.jpg"><?php echo $s['name']; ?></td>
+                        <td>
+                            <?php 
+                                $date = strtotime( $s['date'] );
+                                echo date( 'Y/m/d', $date );
+                            ?>
+                        </td>
+                        <td><?php echo $s['role'];?></td>
+                        <td>
+                            <a href="../signup.php?id=<?php echo $s['id'];?>" id="edit-btn" name="edit"><span class="fa-solid fa-gear" id="action"></span></a>
+                            <a href="../controller/form-action.php?id=<?php echo $s['id'];?>&&action=delete" id="delete-btn"><span class="fa-solid fa-circle-xmark"></span></a>
+                        </td>
+                    </tr>
+                <?php }
+                echo '</tbody>';
+            }else{ ?>
+                <tr><td>No data found</td></tr>
+            <?php }
             
         }
-
     }
-
 }

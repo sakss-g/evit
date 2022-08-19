@@ -681,20 +681,20 @@ a.close {
   border-radius: 5px;
 }
 
-.previous:hover {
-  background: #289ae7;
-  color: white;
-}
-
-.next:hover {
-  background: #289ae7;
-  color: white;
-}
-
 .page-no a.active {
   background: #289ae7;
   color: #fff;
   cursor: pointer;
+}
+
+.previous.disable {
+  pointer-events: none;
+  color: gray;
+}
+
+.next.disable {
+  pointer-events: none;
+  color: gray;
 }
 
 /*# sourceMappingURL=style.css.map */

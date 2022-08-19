@@ -2,7 +2,7 @@
     require_once "../model/database.php";
     $db = new Database();
     $data = array( '*' );
-    $select = $db->get_user_ajax( 'user',0 ,3 );
+    $select = $db->db_get_user_ajax( 'user',0 ,3 );
 ?>
 
 <!DOCTYPE html>
@@ -99,7 +99,7 @@
                     foreach( $select as $s ):?>
                         <tr>
                             <td><?php echo $s['id'];?></td>
-                            <td class="img-name"><img src="../assets/images/ts.jpg"><?php echo $s['name']; ?></td>
+                            <td class="img-name"><img src="../assets/images/t.jpg"><?php echo $s['name']; ?></td>
                             <td>
                                 <?php 
                                     $date = strtotime( $s['date'] );
@@ -121,13 +121,13 @@
             <?php $pagination_data = $db -> select( 'user',array("*") );
             $max = ceil( count( $pagination_data )/3 );?>
 
-            <div class="dashboard-footer" data-max-page="<?php echo $max ?>">
-                <div class="page-no">
-                    <a href="#" class="previous">Previous</a>
+            <div class="dashboard-footer" >
+                <div class="page-no" data-max-page="<?php echo $max ?>">
+                    <a href="" id="0" class="previous disable">Previous</a>
                     <?php for( $i=1; $i <= $max; $i ++ ){ ?>
-                        <a href="#" class="<?php echo $i == 1 ? 'active' : '' ?>"><?php echo $i; ?></a>
+                        <a href="" class="<?php echo $i == 1 ? 'active' : '' ?>" id="<?php echo $i?>"> <?php echo $i; ?></a>
                     <?php } ?>
-                    <a href="#" class="next">Next</a>
+                    <a href="" id="2" class="next">Next</a>
                 </div>
             </div>
         </div>
