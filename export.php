@@ -37,18 +37,18 @@
 
     $pdf->AddPage();
 
-    $html =  '';
+    $html =  '<h1 style="color:#289ae7;">Dashboard to PDF</h1>';
     $html .= '
     <table style="border: 1px solid #000; padding: 5px;">
-    <thead>
-        <tr style="background-color:#289ae7; color: white">
-            <th style="font-size: 12px; font-weight: bold; width: 30px">#</th>
-            <th style="font-size: 12px; font-weight: bold; width: 130px">Name</th>
-            <th style="font-size: 12px; font-weight: bold; width: 150px">Email</th>
-            <th style="font-size: 12px; font-weight: bold; width: 100px">Date Created</th>
-            <th style="font-size: 12px; font-weight: bold; width: 80px">Role</th>
-        </tr>
-    </thead>
+        <thead>
+            <tr style="background-color:#289ae7; color: white; font-weight: bold; font-size: 13px;">
+                <th style="width: 30px">#</th>
+                <th style="width: 130px">Name</th>
+                <th style="width: 150px">Email</th>
+                <th style="width: 100px">Date Created</th>
+                <th style="width: 80px">Role</th>
+            </tr>
+        </thead>
     <tbody>';
     
     if( !empty( $data ) ):
