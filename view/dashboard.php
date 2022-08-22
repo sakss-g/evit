@@ -84,7 +84,14 @@
             <thead>
                 <tr class="user-header">
                     <td colspan="3" class="heading"><h2>User Management</h2></td>
-                    <td colspan="2" class="export"><button class="export-button"><span class="fa-solid fa-file"></span>      Export to pdf</button></td>
+                    <td colspan="2" class="export">
+                        <form method="POST" action="../export.php" target="_blank">
+                            <button class="export-button" name="export">
+                                <span class="fa-solid fa-file"></span>      
+                                Export to pdf
+                            </button>
+                        </form>
+                    </td>
                 </tr>
                 <tr class="column-heading">
                     <td>#</td>
