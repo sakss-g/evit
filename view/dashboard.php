@@ -29,7 +29,6 @@
                 <span class="fa fa-magnifying-glass"></span>
                 <input type="search" placeholder="search"/>
             </div>
-            
         </div>
 
         <div class="user-wrapper">
