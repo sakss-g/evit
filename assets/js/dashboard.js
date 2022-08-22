@@ -62,11 +62,25 @@ jQuery( document ).ready( function(){
             data: {
                 page_num : page
             },
-            success: function( res ){
-                if(res){
-                    jQuery('#user-table tbody').replaceWith(res);
+            beforeSend: function(){
+                $(".table-container table").addClass("loading");
+                $(".circle").show();
+            },
+            complete: function(){
+                $(".table-container table").removeClass("loading");
+                $(".circle").hide();
+            },
+            success: function(res){
+                if( res ){
+                    $( '#user-table tbody' ).replaceWith( res );
+                    // lodaing class hataune
                 }
             }
+            // success: function( res ){
+            //     if(res){
+            //         jQuery('#user-table tbody').replaceWith(res);
+            //     }
+            // }
         })
     });
 
