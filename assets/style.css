@@ -611,7 +611,7 @@ tr {
   border-bottom: 1px solid;
 }
 
-.board,
+.user-management-container,
 header {
   transition: all 0.3s;
 }
@@ -643,14 +643,14 @@ header {
   z-index: 99;
   height: 100vh;
 }
-.show-sidebar .board {
+.show-sidebar .user-management-container {
   padding-left: 260px;
 }
 .show-sidebar header {
   width: calc(100% - 258px);
 }
 @media (max-width: 767px) {
-  .show-sidebar .board {
+  .show-sidebar .user-management-container {
     padding-left: 0;
   }
   .show-sidebar header {
@@ -695,6 +695,28 @@ a.close {
 .next.disable {
   pointer-events: none;
   color: gray;
+}
+
+table.loading {
+  background-color: rgba(0, 0, 0, 0.2196078431);
+}
+
+.circle {
+  height: 100px;
+  width: 100px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  border-top: 5px solid;
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
