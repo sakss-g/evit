@@ -54,8 +54,6 @@ jQuery( document ).ready( function(){
             jQuery( this ).addClass( 'active' ); 
         }
         
-        
-
         $.ajax({
             type: 'POST',
             url: 'http://localhost/evit/controller/ajaxcontrol.php',
