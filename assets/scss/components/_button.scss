@@ -8,6 +8,7 @@
     border-radius: 0.5rem;
     background-color: #e30b5d;
     border-color: #e30b5d;
+    cursor: pointer;
 
     @include for-mobile{
       margin-top: 0.5rem;
@@ -24,4 +25,5 @@
     border-radius: 0.5rem;
     background-color: #e30b5d;
     border-color: #e30b5d;
+    cursor: pointer;
   }
