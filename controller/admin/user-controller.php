@@ -58,7 +58,6 @@ class UserController extends Database{
 
     public function user_update( $id, $name, $email, $password ){
         $d_pass = md5($password);
-        //echo $d_pass;die;
         $fields = array(
             'name' => $name,
             'email' => $email,

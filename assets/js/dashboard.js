@@ -19,7 +19,6 @@ jQuery( document ).ready( function(){
         if(page){
             var previousid = page - 1;
             if( previousid <= 0 ){
-                // alert(previousid);
                 jQuery( '.previous' ).attr( 'id', 0 );
                 jQuery( '.previous' ).addClass( 'disable' );
 
@@ -72,8 +71,3 @@ jQuery( document ).ready( function(){
     });
 
 } );
-
-
-// var active = $( this ).siblings( '.active' );
-// $( active ).removeClass( 'active' );
-// $( active ).prev().addClass( 'active' );
