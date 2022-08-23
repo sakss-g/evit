@@ -78,8 +78,8 @@
     </div>
 
     <div class="user-management-container">
-        <div class = "load"></div>
         <table rules="rows" id="user-table">
+            <div class = "load"></div>
             <thead>
                 <tr class="user-header">
                     <td colspan="3" class="heading"><h2>User Management</h2></td>
@@ -119,7 +119,6 @@
                         </td>
                     </tr>
                 <?php endforeach; ?>
-
             <?php endif; ?>                   
             </tbody>
         </table>

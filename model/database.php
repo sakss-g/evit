@@ -98,7 +98,6 @@ class Database{
     }
 
     public function db_get_user_ajax( $table, $offset, $limit ){
-        //select * from student limit {$offset}, {$limit}";
         $sql = 'SELECT * FROM ' . $table . ' LIMIT ' . $offset . ',' . $limit;
         $query = mysqli_query( $this->conn, $sql);
         
